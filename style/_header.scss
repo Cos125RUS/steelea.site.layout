@@ -48,7 +48,11 @@
             color: rgb(194, 196, 199);
             font-size: 16px;
             font-weight: 400;
-            padding: 21px 18px 18px;
+            min-width: 120px;
+            min-height: 63px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             &:not(:last-child) {
                 border-right: 1.5px solid rgb(255, 255, 255);
@@ -59,7 +63,6 @@
                 color: rgb(255, 255, 255);
                 font-size: 16px;
                 font-weight: 700;
-                margin-left: -1px;
             }
         }
     }
