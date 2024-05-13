@@ -25,7 +25,6 @@ body {
 
 .container {
   font-family: Roboto;
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -33,15 +32,18 @@ body {
 
 .header {
   position: relative;
+  background: url("../img/header/header-background-big.jpeg") bottom center no-repeat;
+  background-size: cover;
+  z-index: -2;
+  min-height: 559px;
 }
 .header__background {
-  background: url("../img/header/header-background-big.png") bottom center no-repeat;
-  background-size: cover;
-  max-width: 100%;
-  min-height: 559px;
-  width: 100%;
   position: absolute;
-  z-index: -2;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  top: 0;
 }
 .header__top {
   margin-left: 96px;
