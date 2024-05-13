@@ -32,22 +32,28 @@ body {
 
 .header {
   position: relative;
-  background: url("../img/header/header-background-big.jpeg") bottom center no-repeat;
-  background-size: cover;
-  z-index: -2;
   min-height: 559px;
 }
-.header__background {
+.header__background-img {
+  position: absolute;
+  background: url("../img/header/header-background-big.jpeg") bottom center no-repeat;
+  background-size: cover;
+  z-index: -3;
+  height: 100%;
+  width: 100%;
+}
+.header__background-opacity {
   position: absolute;
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: -1;
+  z-index: -2;
   top: 0;
 }
 .header__top {
   margin-left: 96px;
   margin-right: 96px;
+  z-index: 1;
 }
 .header__top-nav {
   padding-top: 27px;
@@ -74,10 +80,11 @@ body {
   border-right: 1.5px solid rgb(255, 255, 255);
 }
 .header__sections-link:hover {
+  transition: all 0.5s;
   color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  margin-left: -1px;
 }
 .header__user-interface {
   margin-right: 48px;
