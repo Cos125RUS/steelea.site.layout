@@ -1,0 +1,163 @@
+.header {
+    position: relative;
+
+    &__background {
+        background: url('../img/header/header-background-big.png') bottom center no-repeat;
+        background-size: cover;
+        max-width: 100%;
+        min-height: 559px;
+        width: 100%;
+        position: absolute;
+        z-index: -2;
+    }
+
+    &__top {
+        margin-left: 96px;
+        margin-right: 96px;
+
+        &-nav {
+            padding-top: 27px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        margin-right: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__sections {
+        display: flex;
+        margin-right: 72px;
+
+        &-link {
+            color: rgb(194, 196, 199);
+            font-size: 16px;
+            font-weight: 400;
+            padding: 21px 18px 18px;
+
+            &:not(:last-child) {
+                border-right: 1.5px solid rgb(255, 255, 255);
+            }
+
+            &:hover {
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+        }
+    }
+
+    &__user-interface {
+        margin-right: 48px;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 17px;
+    }
+
+    &__cart {
+        margin-right: 35px;
+        position: relative;
+
+        &-background {
+            border-radius: 0px 0px 11px 11px;
+            background: rgb(13, 100, 201);
+            position: absolute;
+            height: 98px;
+            width: 65px;
+            z-index: 0;
+            top: -40px;
+            z-index: -1;
+        }
+
+        &-icon {
+            margin: 17px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__info {
+        white-space: nowrap;
+
+        &-phone {
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        &-working {
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
+.logo {
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__imgs {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+
+        &-steeldv {
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        &-opt {
+            color: rgb(62, 122, 191);
+            font-size: 11px;
+            font-weight: 700;
+        }
+    }
+}
+
+.search {
+    &-icon:hover {
+        cursor: pointer;
+    }
+
+    &-input {
+        background-color: transparent;
+        border: 0px;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+
+        &::placeholder {
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        &:focus {
+            outline-width: 0;
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+
+.cabinet-icon:hover {
+    cursor: pointer;
+}
