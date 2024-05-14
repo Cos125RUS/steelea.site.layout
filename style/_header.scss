@@ -1,8 +1,7 @@
 .header {
     position: relative;
     min-height: 559px;
-    display: flex;
-    justify-content: center;
+    max-width: 1440px;
 
     &__background-img {
         position: absolute;
@@ -26,7 +25,6 @@
         margin-left: 96px;
         margin-right: 96px;
         z-index: 1;
-        max-width: 1440px;
 
         &-nav {
             padding-top: 27px;
@@ -245,5 +243,20 @@
             }
         }
     }
+}
 
+.banner {
+    display: flex;
+    justify-content: space-around;
+
+    &__left {
+        height: 100%;
+
+    }
+
+    &__picture {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
 }

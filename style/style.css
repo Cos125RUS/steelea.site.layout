@@ -33,8 +33,7 @@ ul {
 .header {
   position: relative;
   min-height: 559px;
-  display: flex;
-  justify-content: center;
+  max-width: 1440px;
 }
 .header__background-img {
   position: absolute;
@@ -56,7 +55,6 @@ ul {
   margin-left: 96px;
   margin-right: 96px;
   z-index: 1;
-  max-width: 1440px;
 }
 .header__top-nav {
   padding-top: 27px;
@@ -234,4 +232,17 @@ ul {
 }
 .sales-info__nav-item:hover:last-child {
   border-radius: 0 0 11px 11px;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-around;
+}
+.banner__left {
+  height: 100%;
+}
+.banner__picture {
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }/*# sourceMappingURL=style.css.map */
