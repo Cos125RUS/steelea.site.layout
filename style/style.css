@@ -18,21 +18,20 @@ a {
   text-decoration: none;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-}
-
 .container {
   font-family: Roboto;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100vw;
 }
 
 .header {
   position: relative;
   min-height: 559px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .header__background-img {
   position: absolute;
@@ -128,31 +127,6 @@ body {
   color: rgb(255, 255, 255);
   font-size: 14px;
   font-weight: 400;
-}
-
-.logo__link {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-.logo__imgs {
-  display: flex;
-  align-items: center;
-}
-.logo__text {
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
-}
-.logo__text-steeldv {
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-  font-weight: 700;
-}
-.logo__text-opt {
-  color: rgb(62, 122, 191);
-  font-size: 11px;
-  font-weight: 700;
 }
 
 .search-icon:hover {

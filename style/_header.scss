@@ -1,6 +1,9 @@
 .header {
     position: relative;
     min-height: 559px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
     &__background-img {
         position: absolute;
@@ -45,7 +48,7 @@
         margin-right: 72px;
 
         &-link {
-            color: rgb(194, 196, 199);
+            color: $grayColor;
             font-size: 16px;
             font-weight: 400;
             min-width: 120px;
@@ -55,12 +58,12 @@
             align-items: center;
 
             &:not(:last-child) {
-                border-right: 1.5px solid rgb(255, 255, 255);
+                border-right: 1.5px solid $whiteColor;
             }
 
             &:hover {
                 transition: all 0.5s;
-                color: rgb(255, 255, 255);
+                color: $whiteColor;
                 font-size: 16px;
                 font-weight: 700;
             }
@@ -117,36 +120,36 @@
     }
 }
 
-.logo {
-    &__link {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-    }
+// .logo {
+//     &__link {
+//         display: flex;
+//         align-items: center;
+//         gap: 25px;
+//     }
 
-    &__imgs {
-        display: flex;
-        align-items: center;
-    }
+//     &__imgs {
+//         display: flex;
+//         align-items: center;
+//     }
 
-    &__text {
-        display: flex;
-        flex-direction: column;
-        white-space: nowrap;
+//     &__text {
+//         display: flex;
+//         flex-direction: column;
+//         white-space: nowrap;
 
-        &-steeldv {
-            color: rgb(255, 255, 255);
-            font-size: 25px;
-            font-weight: 700;
-        }
+//         &-steeldv {
+//             color: rgb(255, 255, 255);
+//             font-size: 25px;
+//             font-weight: 700;
+//         }
 
-        &-opt {
-            color: rgb(62, 122, 191);
-            font-size: 11px;
-            font-weight: 700;
-        }
-    }
-}
+//         &-opt {
+//             color: rgb(62, 122, 191);
+//             font-size: 11px;
+//             font-weight: 700;
+//         }
+//     }
+// }
 
 .search {
     &-icon:hover {
