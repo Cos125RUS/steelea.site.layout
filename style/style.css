@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .container {
   font-family: Roboto;
   display: flex;
@@ -29,7 +33,6 @@ a {
 .header {
   position: relative;
   min-height: 559px;
-  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -53,6 +56,7 @@ a {
   margin-left: 96px;
   margin-right: 96px;
   z-index: 1;
+  max-width: 1440px;
 }
 .header__top-nav {
   padding-top: 27px;
@@ -68,6 +72,7 @@ a {
 .header__sections {
   display: flex;
   margin-right: 72px;
+  cursor: pointer;
 }
 .header__sections-link {
   color: rgb(194, 196, 199);
@@ -81,12 +86,6 @@ a {
 }
 .header__sections-link:not(:last-child) {
   border-right: 1.5px solid rgb(255, 255, 255);
-}
-.header__sections-link:hover {
-  transition: all 0.5s;
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  font-weight: 700;
 }
 .header__user-interface {
   margin-right: 48px;
@@ -115,6 +114,29 @@ a {
 .header__cart-icon:hover {
   cursor: pointer;
 }
+.header__cart-icon:hover path {
+  fill: rgb(178, 245, 34);
+}
+.header__cart-icon:active path {
+  fill: rgb(255, 255, 255);
+}
+.header__cart::after {
+  content: "2";
+  color: rgb(13, 100, 201);
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 11px 11px 11px 5px;
+  background: rgb(178, 245, 34);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -26px;
+  left: 17px;
+}
 .header__info {
   white-space: nowrap;
 }
@@ -131,6 +153,12 @@ a {
 
 .search-icon:hover {
   cursor: pointer;
+}
+.search-icon:hover path {
+  fill: rgb(13, 100, 201);
+}
+.search-icon:active path {
+  fill: rgb(178, 245, 34);
 }
 .search-input {
   background-color: transparent;
@@ -153,6 +181,56 @@ a {
   color: rgb(255, 255, 255);
 }
 
+.hover-big:hover {
+  transition: all 0.5s;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .cabinet-icon:hover {
   cursor: pointer;
+}
+.cabinet-icon:hover path {
+  fill: rgb(13, 100, 201);
+}
+.cabinet-icon:active path {
+  fill: rgb(178, 245, 34);
+}
+
+.sales-info__button-nav {
+  position: relative;
+}
+.sales-info__checkbox {
+  position: absolute;
+  top: -66666px;
+}
+.sales-info__checkbox:checked ~ .sales-info__nav {
+  display: block;
+}
+.sales-info__label {
+  cursor: pointer;
+}
+.sales-info__nav {
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+  background-color: rgb(22, 21, 79);
+  top: 56px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 11px;
+}
+.sales-info__nav-item {
+  padding: 6px 14px;
+}
+.sales-info__nav-item:hover {
+  background: rgba(62, 122, 191, 0.7);
+}
+.sales-info__nav-item:hover:first-child {
+  border-radius: 11px 11px 0 0;
+}
+.sales-info__nav-item:hover:last-child {
+  border-radius: 0 0 11px 11px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,6 @@
 .header {
     position: relative;
     min-height: 559px;
-    width: 100%;
     display: flex;
     justify-content: center;
 
@@ -27,6 +26,7 @@
         margin-left: 96px;
         margin-right: 96px;
         z-index: 1;
+        max-width: 1440px;
 
         &-nav {
             padding-top: 27px;
@@ -46,6 +46,7 @@
     &__sections {
         display: flex;
         margin-right: 72px;
+        cursor: pointer;
 
         &-link {
             color: $grayColor;
@@ -59,13 +60,6 @@
 
             &:not(:last-child) {
                 border-right: 1.5px solid $whiteColor;
-            }
-
-            &:hover {
-                transition: all 0.5s;
-                color: $whiteColor;
-                font-size: 16px;
-                font-weight: 700;
             }
         }
     }
@@ -85,7 +79,7 @@
 
         &-background {
             border-radius: 0px 0px 11px 11px;
-            background: rgb(13, 100, 201);
+            background: $blueColor;
             position: absolute;
             height: 98px;
             width: 65px;
@@ -99,7 +93,35 @@
 
             &:hover {
                 cursor: pointer;
+
+                path {
+                    fill: $yellowColor;
+                }
             }
+
+            &:active {
+                path {
+                    fill: $whiteColor;
+                }
+            }
+        }
+
+        &::after {
+            content: '2';
+            color: $blueColor;
+            font-size: 14px;
+            font-weight: 700;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            box-sizing: border-box;
+            border-radius: 11px 11px 11px 5px;
+            background: $yellowColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -26px;
+            left: 17px;
         }
     }
 
@@ -107,74 +129,120 @@
         white-space: nowrap;
 
         &-phone {
-            color: rgb(255, 255, 255);
+            color: $whiteColor;
             font-size: 18px;
             font-weight: 500;
         }
 
         &-working {
-            color: rgb(255, 255, 255);
+            color: $whiteColor;
             font-size: 14px;
             font-weight: 400;
         }
     }
 }
 
-// .logo {
-//     &__link {
-//         display: flex;
-//         align-items: center;
-//         gap: 25px;
-//     }
-
-//     &__imgs {
-//         display: flex;
-//         align-items: center;
-//     }
-
-//     &__text {
-//         display: flex;
-//         flex-direction: column;
-//         white-space: nowrap;
-
-//         &-steeldv {
-//             color: rgb(255, 255, 255);
-//             font-size: 25px;
-//             font-weight: 700;
-//         }
-
-//         &-opt {
-//             color: rgb(62, 122, 191);
-//             font-size: 11px;
-//             font-weight: 700;
-//         }
-//     }
-// }
-
 .search {
     &-icon:hover {
         cursor: pointer;
+
+        path {
+            fill: $blueColor;
+        }
+    }
+
+    &-icon:active {
+        path {
+            fill: $yellowColor;
+        }
     }
 
     &-input {
         background-color: transparent;
         border: 0px;
-        border-bottom: 1px solid rgb(255, 255, 255);
-        color: rgb(255, 255, 255);
+        border-bottom: 1px solid $whiteColor;
+        color: $whiteColor;
 
         &::placeholder {
-            color: rgb(255, 255, 255);
+            color: $whiteColor;
             font-size: 14px;
             font-weight: 400;
         }
 
         &:focus {
             outline-width: 0;
-            color: rgb(255, 255, 255);
+            color: $whiteColor;
         }
     }
 }
 
-.cabinet-icon:hover {
-    cursor: pointer;
+.hover-big:hover {
+    transition: all 0.5s;
+    color: $whiteColor;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.cabinet-icon {
+    &:hover {
+        cursor: pointer;
+
+        path {
+            fill: $blueColor;
+        }
+    }
+
+    &:active {
+        path {
+            fill: $yellowColor;
+        }
+    }
+}
+
+.sales-info {
+    &__button-nav {
+        position: relative;
+    }
+
+    &__checkbox {
+        position: absolute;
+        top: -66666px;
+
+        &:checked~.sales-info__nav {
+            display: block;
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+    }
+
+    &__nav {
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        background-color: $darkblueColor;
+        top: 56px;
+        left: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 11px;
+
+        &-item {
+            padding: 6px 14px;
+
+            &:hover {
+                background: rgba(62, 122, 191, 0.7);
+
+                &:first-child {
+                    border-radius: 11px 11px 0 0;
+                }
+
+                &:last-child {
+                    border-radius: 0 0 11px 11px;
+                }
+            }
+        }
+    }
+
 }
