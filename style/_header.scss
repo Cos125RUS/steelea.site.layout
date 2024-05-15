@@ -27,6 +27,7 @@
         margin-right: 96px;
         max-width: 1440px;
         z-index: 1;
+        margin-bottom: 117px;
 
         &-nav {
             padding-top: 27px;
@@ -117,6 +118,11 @@
             @include font(14px, 400);
         }
     }
+
+    &__middle {
+        width: 100vw;
+        @extend %flex-center;
+    }
 }
 
 .search {
@@ -167,15 +173,62 @@
 
 .banner {
     display: flex;
-    justify-content: space-around;
+    align-items: end;
+    max-width: 1440px;
+    gap: 167px;
 
     &__left {
         height: 100%;
-
+        flex-shrink: 1;
     }
 
     &__picture {
         @extend %flex-center;
         align-items: end;
+    }
+
+    &__right {
+        color: $whiteColor;
+        flex-shrink: 1;
+
+        &-bottom {
+            margin-bottom: 47px;
+            display: flex;
+        }
+    }
+
+    &__title {
+        @include font(29px, 400);
+        margin-bottom: 40px;
+
+        &-name {
+            font-size: 40px;
+        }
+    }
+
+    &__description {
+        @include font(16px, 400);
+        margin-bottom: 33px;
+    }
+
+    &__price {
+        &-box {
+            padding-right: 23px;
+            border-right: 2px solid $whiteColor;
+        }
+
+        &-old {
+            text-decoration: line-through;
+            @include font(14px, 400);
+        }
+
+        &-new {
+            @include font(18px, 700);
+        }
+    }
+
+    &__superprice {
+        display: flex;
+        justify-content: end;
     }
 }
