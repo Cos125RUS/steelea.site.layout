@@ -1,3 +1,43 @@
+.banner__picture {
+  display: flex;
+  justify-content: center;
+}
+
+.header__cart::after, .header__sections-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box, .header__top-nav, .header {
+  display: flex;
+  align-items: center;
+}
+
+.usable:hover {
+  cursor: pointer;
+}
+.usable:hover path {
+  fill: rgb(178, 245, 34);
+}
+.usable:active path {
+  fill: rgb(13, 100, 201);
+}
+
+.dropdown-menu__button-nav {
+  position: relative;
+}
+.dropdown-menu__checkbox {
+  position: absolute;
+  top: -66666px;
+}
+.dropdown-menu__checkbox:checked ~ .dropdown-menu__nav {
+  display: block;
+}
+.dropdown-menu__label {
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +73,7 @@ ul {
 .header {
   position: relative;
   min-height: 559px;
-  max-width: 1440px;
+  flex-direction: column;
 }
 .header__background-img {
   position: absolute;
@@ -54,12 +94,11 @@ ul {
 .header__top {
   margin-left: 96px;
   margin-right: 96px;
+  max-width: 1440px;
   z-index: 1;
 }
 .header__top-nav {
   padding-top: 27px;
-  display: flex;
-  align-items: center;
 }
 .header__logo {
   margin-right: 20px;
@@ -78,9 +117,6 @@ ul {
   font-weight: 400;
   min-width: 120px;
   min-height: 63px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .header__sections-link:not(:last-child) {
   border-right: 1.5px solid rgb(255, 255, 255);
@@ -109,15 +145,6 @@ ul {
 .header__cart-icon {
   margin: 17px;
 }
-.header__cart-icon:hover {
-  cursor: pointer;
-}
-.header__cart-icon:hover path {
-  fill: rgb(178, 245, 34);
-}
-.header__cart-icon:active path {
-  fill: rgb(255, 255, 255);
-}
 .header__cart::after {
   content: "2";
   color: rgb(13, 100, 201);
@@ -129,9 +156,6 @@ ul {
   box-sizing: border-box;
   border-radius: 11px 11px 11px 5px;
   background: rgb(178, 245, 34);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   top: -26px;
   left: 17px;
 }
@@ -149,19 +173,13 @@ ul {
   font-weight: 400;
 }
 
-.search-icon:hover {
-  cursor: pointer;
-}
-.search-icon:hover path {
-  fill: rgb(13, 100, 201);
-}
-.search-icon:active path {
-  fill: rgb(178, 245, 34);
+.search-box {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  gap: 5px;
 }
 .search-input {
   background-color: transparent;
   border: 0px;
-  border-bottom: 1px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
 }
 .search-input::-moz-placeholder {
@@ -178,6 +196,36 @@ ul {
   outline-width: 0;
   color: rgb(255, 255, 255);
 }
+.search-cross {
+  cursor: pointer;
+}
+.search-cross:hover {
+  transform: scale(1.2);
+}
+.search-dropdown {
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+  background-color: rgb(255, 255, 255);
+  top: 40px;
+  left: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  border-radius: 11px;
+}
+.search-dropdown__item {
+  padding: 6px 14px;
+}
+.search-dropdown__item:hover {
+  background: rgb(194, 196, 199);
+}
+.search-dropdown__item:hover:first-child {
+  border-radius: 11px 11px 0 0;
+}
+.search-dropdown__item:hover:last-child {
+  border-radius: 0 0 11px 11px;
+}
 
 .hover-big:hover {
   transition: all 0.5s;
@@ -186,30 +234,7 @@ ul {
   font-weight: 700;
 }
 
-.cabinet-icon:hover {
-  cursor: pointer;
-}
-.cabinet-icon:hover path {
-  fill: rgb(13, 100, 201);
-}
-.cabinet-icon:active path {
-  fill: rgb(178, 245, 34);
-}
-
-.sales-info__button-nav {
-  position: relative;
-}
-.sales-info__checkbox {
-  position: absolute;
-  top: -66666px;
-}
-.sales-info__checkbox:checked ~ .sales-info__nav {
-  display: block;
-}
-.sales-info__label {
-  cursor: pointer;
-}
-.sales-info__nav {
+.sales-dropdown {
   display: none;
   position: absolute;
   white-space: nowrap;
@@ -221,16 +246,16 @@ ul {
   color: rgb(255, 255, 255);
   border-radius: 11px;
 }
-.sales-info__nav-item {
+.sales-dropdown__item {
   padding: 6px 14px;
 }
-.sales-info__nav-item:hover {
+.sales-dropdown__item:hover {
   background: rgba(62, 122, 191, 0.7);
 }
-.sales-info__nav-item:hover:first-child {
+.sales-dropdown__item:hover:first-child {
   border-radius: 11px 11px 0 0;
 }
-.sales-info__nav-item:hover:last-child {
+.sales-dropdown__item:hover:last-child {
   border-radius: 0 0 11px 11px;
 }
 
@@ -242,7 +267,5 @@ ul {
   height: 100%;
 }
 .banner__picture {
-  display: flex;
-  justify-content: center;
   align-items: end;
 }/*# sourceMappingURL=style.css.map */

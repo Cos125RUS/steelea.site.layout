@@ -1,0 +1,34 @@
+.usable {
+    &:hover {
+        cursor: pointer;
+
+        path {
+            fill: $yellowColor;
+        }
+    }
+
+    &:active {
+        path {
+            fill: $blueColor;
+        }
+    }
+}
+
+.dropdown-menu {
+    &__button-nav {
+        position: relative;
+    }
+
+    &__checkbox {
+        position: absolute;
+        top: -66666px;
+
+        &:checked~.dropdown-menu__nav {
+            display: block;
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,33 @@
+@mixin create-dropdown($fontColor, $backgroundColor, $focusBackgroundColor, $top, $left) {
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    background-color: $backgroundColor;
+    top: $top;
+    left: $left;
+    font-size: 14px;
+    font-weight: 400;
+    color: $fontColor;
+    border-radius: 11px;
+
+    &__item {
+        padding: 6px 14px;
+
+        &:hover {
+            background: $focusBackgroundColor;
+
+            &:first-child {
+                border-radius: 11px 11px 0 0;
+            }
+
+            &:last-child {
+                border-radius: 0 0 11px 11px;
+            }
+        }
+    }
+}
+
+@mixin font($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}

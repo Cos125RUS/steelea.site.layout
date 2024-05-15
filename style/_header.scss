@@ -1,7 +1,8 @@
 .header {
     position: relative;
     min-height: 559px;
-    max-width: 1440px;
+    @extend %flex-top-center;
+    flex-direction: column;
 
     &__background-img {
         position: absolute;
@@ -24,12 +25,12 @@
     &__top {
         margin-left: 96px;
         margin-right: 96px;
+        max-width: 1440px;
         z-index: 1;
 
         &-nav {
             padding-top: 27px;
-            display: flex;
-            align-items: center;
+            @extend %flex-top-center;
         }
     }
 
@@ -48,13 +49,10 @@
 
         &-link {
             color: $grayColor;
-            font-size: 16px;
-            font-weight: 400;
+            @include font(16px, 400);
             min-width: 120px;
             min-height: 63px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex-center-center;
 
             &:not(:last-child) {
                 border-right: 1.5px solid $whiteColor;
@@ -88,36 +86,19 @@
 
         &-icon {
             margin: 17px;
-
-            &:hover {
-                cursor: pointer;
-
-                path {
-                    fill: $yellowColor;
-                }
-            }
-
-            &:active {
-                path {
-                    fill: $whiteColor;
-                }
-            }
         }
 
         &::after {
             content: '2';
             color: $blueColor;
-            font-size: 14px;
-            font-weight: 700;
+            @include font(14px, 700);
             position: absolute;
             width: 30px;
             height: 30px;
             box-sizing: border-box;
             border-radius: 11px 11px 11px 5px;
             background: $yellowColor;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex-center-center;
             top: -26px;
             left: 17px;
         }
@@ -128,43 +109,31 @@
 
         &-phone {
             color: $whiteColor;
-            font-size: 18px;
-            font-weight: 500;
+            @include font(18px, 500);
         }
 
         &-working {
             color: $whiteColor;
-            font-size: 14px;
-            font-weight: 400;
+            @include font(14px, 400);
         }
     }
 }
 
 .search {
-    &-icon:hover {
-        cursor: pointer;
-
-        path {
-            fill: $blueColor;
-        }
-    }
-
-    &-icon:active {
-        path {
-            fill: $yellowColor;
-        }
+    &-box {
+        border-bottom: 1px solid $whiteColor;
+        @extend %flex-top-center;
+        gap: 5px;
     }
 
     &-input {
         background-color: transparent;
         border: 0px;
-        border-bottom: 1px solid $whiteColor;
         color: $whiteColor;
 
         &::placeholder {
             color: $whiteColor;
-            font-size: 14px;
-            font-weight: 400;
+            @include font(14px, 400);
         }
 
         &:focus {
@@ -172,77 +141,28 @@
             color: $whiteColor;
         }
     }
+
+    &-cross {
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.2)
+        }
+    }
+
+    &-dropdown {
+        @include create-dropdown($blackColor, $whiteColor, $grayColor, 40px, 0);
+    }
 }
 
 .hover-big:hover {
     transition: all 0.5s;
     color: $whiteColor;
-    font-size: 16px;
-    font-weight: 700;
+    @include font(16px, 700);
 }
 
-.cabinet-icon {
-    &:hover {
-        cursor: pointer;
-
-        path {
-            fill: $blueColor;
-        }
-    }
-
-    &:active {
-        path {
-            fill: $yellowColor;
-        }
-    }
-}
-
-.sales-info {
-    &__button-nav {
-        position: relative;
-    }
-
-    &__checkbox {
-        position: absolute;
-        top: -66666px;
-
-        &:checked~.sales-info__nav {
-            display: block;
-        }
-    }
-
-    &__label {
-        cursor: pointer;
-    }
-
-    &__nav {
-        display: none;
-        position: absolute;
-        white-space: nowrap;
-        background-color: $darkblueColor;
-        top: 56px;
-        left: 10px;
-        font-size: 14px;
-        font-weight: 400;
-        color: $whiteColor;
-        border-radius: 11px;
-
-        &-item {
-            padding: 6px 14px;
-
-            &:hover {
-                background: rgba(62, 122, 191, 0.7);
-
-                &:first-child {
-                    border-radius: 11px 11px 0 0;
-                }
-
-                &:last-child {
-                    border-radius: 0 0 11px 11px;
-                }
-            }
-        }
-    }
+.sales-dropdown {
+    @include create-dropdown($whiteColor, $darkblueColor, rgba(62, 122, 191, 0.7), 56px, 10px);
 }
 
 .banner {
@@ -255,8 +175,7 @@
     }
 
     &__picture {
-        display: flex;
-        justify-content: center;
+        @extend %flex-center;
         align-items: end;
     }
 }
