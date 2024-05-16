@@ -233,6 +233,7 @@
 
     &__prices {
         padding-right: 24px;
+
         &:first-child {
             border-right: 2px solid $whiteColor;
         }
@@ -241,7 +242,7 @@
     &__superprice {
         display: flex;
         justify-content: end;
-        
+
         &-box {
             padding-left: 24px;
             display: flex;
@@ -252,14 +253,24 @@
     &__button {
         @include font(14px, 700);
         color: $whiteColor;
-        padding: 15px 39px 12px;
         background-color: $blueColor;
+        width: 194px;
+        height: 48px;
+        @extend %flex-center-center;
         border: 0;
         border-radius: 11px;
 
         &:hover {
             background-color: $darkblueColor;
             cursor: pointer;
+        }
+
+        &:active {
+            color: $blueColor;
+            background-color: $whiteColor;
+            border: 1.5px solid $blueColor;
+            white-space: nowrap;
+            box-sizing: border-box;
         }
     }
 
@@ -274,7 +285,8 @@
             margin-right: 15px;
         }
 
-        &-line:hover, &-dot:hover {
+        &-line:hover,
+        &-dot:hover {
             cursor: pointer;
         }
     }

@@ -3,7 +3,7 @@
   justify-content: center;
 }
 
-.header__cart::after, .header__sections-link {
+.banner__button, .header__cart::after, .header__sections-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,14 +331,22 @@ ul {
   font-size: 14px;
   font-weight: 700;
   color: rgb(255, 255, 255);
-  padding: 15px 39px 12px;
   background-color: rgb(13, 100, 201);
+  width: 194px;
+  height: 48px;
   border: 0;
   border-radius: 11px;
 }
 .banner__button:hover {
   background-color: rgb(22, 21, 79);
   cursor: pointer;
+}
+.banner__button:active {
+  color: rgb(13, 100, 201);
+  background-color: rgb(255, 255, 255);
+  border: 1.5px solid rgb(13, 100, 201);
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 .banner__nav {
   display: flex;
