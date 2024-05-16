@@ -3,6 +3,7 @@
     min-height: 559px;
     @extend %flex-top-center;
     flex-direction: column;
+    border-bottom: 10px solid $blueColor;
 
     &__background-img {
         position: absolute;
@@ -172,10 +173,13 @@
 }
 
 .banner {
-    display: flex;
-    align-items: end;
-    max-width: 1440px;
-    gap: 167px;
+    &__info {
+        display: flex;
+        align-items: end;
+        max-width: 1440px;
+        gap: 167px;
+        margin-bottom: 10px;
+    }
 
     &__left {
         height: 100%;
@@ -213,8 +217,8 @@
 
     &__price {
         &-box {
-            padding-right: 23px;
-            border-right: 2px solid $whiteColor;
+            display: flex;
+            padding-right: 16px;
         }
 
         &-old {
@@ -227,8 +231,51 @@
         }
     }
 
+    &__prices {
+        padding-right: 24px;
+        &:first-child {
+            border-right: 2px solid $whiteColor;
+        }
+    }
+
     &__superprice {
         display: flex;
         justify-content: end;
+        
+        &-box {
+            padding-left: 24px;
+            display: flex;
+            align-items: end;
+        }
+    }
+
+    &__button {
+        @include font(14px, 700);
+        color: $whiteColor;
+        padding: 15px 39px 12px;
+        background-color: $blueColor;
+        border: 0;
+        border-radius: 11px;
+
+        &:hover {
+            background-color: $darkblueColor;
+            cursor: pointer;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 18px;
+
+        &-box {
+            display: flex;
+            gap: 7px;
+            margin-right: 15px;
+        }
+
+        &-line:hover, &-dot:hover {
+            cursor: pointer;
+        }
     }
 }
