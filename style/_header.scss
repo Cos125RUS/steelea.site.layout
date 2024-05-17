@@ -233,6 +233,9 @@
 
     &__prices {
         padding-right: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
 
         &:first-child {
             border-right: 2px solid $whiteColor;

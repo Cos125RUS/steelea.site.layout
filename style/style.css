@@ -316,6 +316,9 @@ ul {
 }
 .banner__prices {
   padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 .banner__prices:first-child {
   border-right: 2px solid rgb(255, 255, 255);
