@@ -1,0 +1,38 @@
+.index-catalog {
+    @extend %flex-column-center-center;
+    border-bottom: 1.5px solid $grayColor;
+    background: linear-gradient(0.00deg, rgb(249, 249, 249) 51.616%, rgb(213, 217, 217) 198.516%);
+
+    &__title {
+        margin-top: 58px;
+        color: $blueColor;
+        @include font(24px, 700);
+    }
+
+    &__cards {
+        margin: 53px 80px 78px;
+        @extend %flex-center;
+        flex-wrap: wrap;
+        gap: 54px;
+
+    }
+
+    &__card {
+        @extend %flex-column-center-center;
+        background-color: $whiteColor;
+        box-sizing: border-box;
+        border: 1px solid $whiteColor;
+        border-radius: 30px;
+
+        &-img {
+            padding: 17px 10px 0px;
+        }
+
+        &-name {
+            color: $blackColor;
+            @include font(18px, 500);
+            padding-bottom: 33px;
+        }
+    }
+
+}

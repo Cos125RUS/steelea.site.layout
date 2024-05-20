@@ -1,4 +1,4 @@
-.banner__picture, .header__middle {
+.index-catalog__cards, .banner__picture, .header__middle {
   display: flex;
   justify-content: center;
 }
@@ -11,6 +11,13 @@
 
 .search-box, .header__top-nav, .header {
   display: flex;
+  align-items: center;
+}
+
+.index-catalog__card, .index-catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -365,4 +372,35 @@ ul {
 }
 .banner__nav-line:hover, .banner__nav-dot:hover {
   cursor: pointer;
+}
+
+.index-catalog {
+  border-bottom: 1.5px solid rgb(194, 196, 199);
+  background: linear-gradient(0deg, rgb(249, 249, 249) 51.616%, rgb(213, 217, 217) 198.516%);
+}
+.index-catalog__title {
+  margin-top: 58px;
+  color: rgb(13, 100, 201);
+  font-size: 24px;
+  font-weight: 700;
+}
+.index-catalog__cards {
+  margin: 53px 80px 78px;
+  flex-wrap: wrap;
+  gap: 54px;
+}
+.index-catalog__card {
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+}
+.index-catalog__card-img {
+  padding: 17px 10px 0px;
+}
+.index-catalog__card-name {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 33px;
 }/*# sourceMappingURL=style.css.map */
