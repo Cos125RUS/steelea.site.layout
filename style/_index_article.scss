@@ -1,11 +1,18 @@
 .index-services {
     background: linear-gradient(180.00deg, rgb(225, 230, 230) 51.658%, rgb(118, 119, 119) 162.359%);
     @extend %flex-center;
+}
 
+.index-delivery {
+    background-image: url('../img/index_delivery/background.png');
+    @extend %flex-center;
+}
+
+.index-article {
     &__box {
         width: 100%;
         max-width: 1440px;
-        margin-left: 152px;
+        padding-left: 152px;
         margin-bottom: 70px;
         display: flex;
     }
