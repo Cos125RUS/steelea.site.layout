@@ -9,6 +9,12 @@
     align-items: center;
 }
 
+%flex-center-end {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
 %flex-top-center {
     display: flex;
     align-items: center;
@@ -24,4 +30,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+%flex-column-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }

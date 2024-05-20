@@ -1,10 +1,10 @@
-.about-us {
+.index-about-us {
     @extend %flex-center;
 
     &__box {
         display: flex;
         gap: 29px;
-        margin: 69px 162px 148px;
+        padding: 69px 162px 148px;
         max-width: 1440px;
         width: 100%;
     }
@@ -38,7 +38,7 @@
             white-space: nowrap;
 
             &:hover {
-                color: $yellowColor;
+                color: $blueColor;
             }
         }
     }
@@ -57,7 +57,7 @@
         }
 
         &-content {
-            color: rgba(47, 53, 63, 0.7);
+            color: $lightGrayColor;
             @include font(18px, 500);
         }
     }
@@ -66,14 +66,6 @@
 
 
 .active {
-    &__link {
-        color: $blueColor;
-    
-        &:hover {
-            color: $blueColor;
-        }
-    }
-
     &__circle {
         display: block;
     }

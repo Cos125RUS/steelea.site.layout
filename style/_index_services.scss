@@ -1,0 +1,81 @@
+.index-services {
+    background: linear-gradient(180.00deg, rgb(225, 230, 230) 51.658%, rgb(118, 119, 119) 162.359%);
+    @extend %flex-center;
+
+    &__box {
+        width: 100%;
+        max-width: 1440px;
+        margin-left: 152px;
+        margin-bottom: 70px;
+        display: flex;
+    }
+
+    &__img {
+        margin-right: 86px;
+    }
+
+    &__content {
+        margin-right: 50px;
+        max-width: 574px;
+        @extend %flex-column-end;
+
+        &-title {
+            color: $blueColor;
+            @include font(24px, 700);
+            margin-bottom: 20px;
+        }
+
+        &-subtitle {
+            @include font(20px, 700);
+            margin-bottom: 30px;
+        }
+
+        &-text {
+            color: $lightGrayColor;
+            @include font(18px, 500);
+            margin-bottom: 30px;
+        }
+
+        &-button {
+            width: 194px;
+            height: 48px;
+            border-radius: 11px;
+            background: $whiteColor;
+            border: 0;
+            @include font(14px, 700);
+            box-sizing: border-box;
+
+            &:hover {
+                cursor: pointer;
+                background: $darkblueColor;
+                color: $whiteColor;
+            }
+
+            &:active {
+                background: $whiteColor;
+                color: $blueColor;
+                border: 1px solid $blueColor;
+            }
+        }
+    }
+
+    &__icon {
+        &-box {
+            width: 65px;
+            height: 98px;
+            background-color: $blueColor;
+            border-radius: 0px 0px 11px 11px;
+            @extend %flex-center-end;
+        }
+
+        margin: 15px;
+
+        &:hover {
+            cursor: pointer;
+
+            & path {
+                fill: $yellowColor;
+            }
+        }
+    }
+}
