@@ -1,7 +1,12 @@
 .index-catalog {
-    @extend %flex-column-center-center;
+    @extend %flex-center;
     border-bottom: 1.5px solid $grayColor;
     background: linear-gradient(0.00deg, rgb(249, 249, 249) 51.616%, rgb(213, 217, 217) 198.516%);
+
+    &__box {
+        @extend %flex-column-center-center;
+        max-width: 1440px;
+    }
 
     &__title {
         margin-top: 58px;
