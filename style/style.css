@@ -1,3 +1,13 @@
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
 .footer__box, .index-delivery, .index-services, .index-about-us, .index-catalog__cards, .index-catalog, .banner__picture, .header__middle {
   display: flex;
   justify-content: center;
@@ -510,7 +520,7 @@ ul {
   margin-bottom: 30px;
 }
 .index-services__icon:hover {
-  transform: rotate(720deg);
+  transform: rotate(1440deg);
   transition: 1s;
 }
 
@@ -545,6 +555,9 @@ ul {
   font-weight: 500;
   opacity: 0.7;
   margin-bottom: 80px;
+}
+.index-delivery__icon:hover {
+  animation: slide-out-right 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .index-article__box {
