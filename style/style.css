@@ -100,9 +100,9 @@ ul {
   flex-direction: column;
   border-bottom: 10px solid rgb(13, 100, 201);
 }
-.header__background-img {
+.header__background {
   position: absolute;
-  background: url("../img/header/header-background-big.jpeg") bottom center no-repeat;
+  background: url("../img/header/header-background-big.jpeg") center center no-repeat;
   background-size: cover;
   z-index: -3;
   height: 100%;
@@ -482,9 +482,56 @@ ul {
 .index-services {
   background: linear-gradient(180deg, rgb(225, 230, 230) 51.658%, rgb(118, 119, 119) 162.359%);
 }
+.index-services__content-title {
+  color: rgb(13, 100, 201);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.index-services__content-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.index-services__content-text {
+  color: rgba(58, 59, 60, 0.7);
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
 
 .index-delivery {
-  background-image: url("../img/index_delivery/background.png");
+  position: relative;
+}
+.index-delivery__background {
+  position: absolute;
+  background: url("../img/index_delivery/background.jpeg") center center no-repeat;
+  background-size: cover;
+  z-index: -3;
+  height: 100%;
+  width: 100%;
+}
+.index-delivery__background-opacity {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -2;
+  top: 0;
+}
+.index-delivery__content-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: rgb(255, 255, 255);
+}
+.index-delivery__content-text {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.7;
+  margin-bottom: 80px;
 }
 
 .index-article__box {
@@ -500,23 +547,6 @@ ul {
 .index-article__content {
   margin-right: 50px;
   max-width: 574px;
-}
-.index-article__content-title {
-  color: rgb(13, 100, 201);
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.index-article__content-subtitle {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-.index-article__content-text {
-  color: rgba(58, 59, 60, 0.7);
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 30px;
 }
 .index-article__content-button {
   width: 194px;

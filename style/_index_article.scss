@@ -1,11 +1,46 @@
 .index-services {
     background: linear-gradient(180.00deg, rgb(225, 230, 230) 51.658%, rgb(118, 119, 119) 162.359%);
     @extend %flex-center;
+
+    &__content {
+        &-title {
+            color: $blueColor;
+            @include font(24px, 700);
+            margin-bottom: 20px;
+        }
+
+        &-subtitle {
+            @include font(20px, 700);
+            margin-bottom: 30px;
+        }
+
+        &-text {
+            color: $lightGrayColor;
+            @include font(18px, 500);
+            opacity: 0.7;
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .index-delivery {
-    background-image: url('../img/index_delivery/background.png');
+    @include background-img('../img/index_delivery/background.jpeg');
     @extend %flex-center;
+    
+    &__content {
+        &-subtitle {
+            @include font(20px, 700);
+            margin-bottom: 24px;
+            color: $whiteColor;
+        }
+
+        &-text {
+            color: $whiteColor;
+            @include font(18px, 500);
+            opacity: 0.7;
+            margin-bottom: 80px;
+        }
+    }
 }
 
 .index-article {
@@ -25,23 +60,6 @@
         margin-right: 50px;
         max-width: 574px;
         @extend %flex-column-end;
-
-        &-title {
-            color: $blueColor;
-            @include font(24px, 700);
-            margin-bottom: 20px;
-        }
-
-        &-subtitle {
-            @include font(20px, 700);
-            margin-bottom: 30px;
-        }
-
-        &-text {
-            color: $lightGrayColor;
-            @include font(18px, 500);
-            margin-bottom: 30px;
-        }
 
         &-button {
             width: 194px;

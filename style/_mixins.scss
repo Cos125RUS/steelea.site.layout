@@ -32,3 +32,25 @@
     font-size: $size;
     font-weight: $weight;
 }
+
+@mixin background-img($img) {
+    position: relative;
+
+    &__background {
+        position: absolute;
+        background: url($img) center center no-repeat;
+        background-size: cover;
+        z-index: -3;
+        height: 100%;
+        width: 100%;
+        
+        &-opacity {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -2;
+            top: 0;
+        }
+    }
+}

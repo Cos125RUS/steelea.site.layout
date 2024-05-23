@@ -1,27 +1,9 @@
 .header {
-    position: relative;
+    @include background-img('../img/header/header-background-big.jpeg');
     min-height: 559px;
     @extend %flex-top-center;
     flex-direction: column;
     border-bottom: 10px solid $blueColor;
-
-    &__background-img {
-        position: absolute;
-        background: url('../img/header/header-background-big.jpeg') bottom center no-repeat;
-        background-size: cover;
-        z-index: -3;
-        height: 100%;
-        width: 100%;
-    }
-
-    &__background-opacity {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        z-index: -2;
-        top: 0;
-    }
 
     &__top {
         margin-left: 96px;
