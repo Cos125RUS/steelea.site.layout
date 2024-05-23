@@ -1,4 +1,4 @@
-.index-delivery, .index-services, .index-about-us, .index-catalog__cards, .index-catalog, .banner__picture, .header__middle {
+.footer__box, .index-delivery, .index-services, .index-about-us, .index-catalog__cards, .index-catalog, .banner__picture, .header__middle {
   display: flex;
   justify-content: center;
 }
@@ -20,12 +20,12 @@
   align-items: center;
 }
 
-.index-about-us__nav-ul {
+.footer__phones-list, .footer__address-links, .footer__address-list, .footer__company-content, .footer__logo-box, .index-about-us__nav-ul {
   display: flex;
   flex-direction: column;
 }
 
-.index-catalog__card, .index-catalog__box {
+.footer, .index-catalog__card, .index-catalog__box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,8 +90,9 @@ ul {
   font-family: Roboto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
 }
 
 .header {
@@ -424,6 +425,9 @@ ul {
   font-weight: 500;
   padding-bottom: 33px;
 }
+.index-catalog__card:hover {
+  cursor: pointer;
+}
 
 .index-about-us__box {
   display: flex;
@@ -516,7 +520,7 @@ ul {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   z-index: -2;
   top: 0;
 }
@@ -566,7 +570,7 @@ ul {
 .index-article__content-button:active {
   background: rgb(255, 255, 255);
   color: rgb(13, 100, 201);
-  border: 1px solid rgb(13, 100, 201);
+  border: 1.5px solid rgb(13, 100, 201);
 }
 .index-article__icon {
   margin: 15px;
@@ -582,4 +586,130 @@ ul {
 }
 .index-article__icon:hover path {
   fill: rgb(178, 245, 34);
+}
+
+.footer {
+  min-width: 100vw;
+}
+.footer__box {
+  max-width: 1440px;
+  min-height: 365px;
+  padding: 62px 113px 62px 141px;
+}
+.footer__card-box {
+  display: flex;
+}
+.footer__card-title {
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 28px;
+  padding-bottom: 15px;
+  border-bottom: 1.5px solid rgb(194, 196, 199);
+  margin-bottom: 52px;
+}
+.footer__logo-box {
+  min-width: 304px;
+  gap: 96px;
+  margin-right: 95px;
+}
+.footer__logo-top {
+  display: flex;
+  justify-content: start;
+}
+.footer__logo-link:hover svg path {
+  fill: rgb(13, 100, 201);
+}
+.footer__logo-bottom {
+  display: flex;
+  justify-content: end;
+}
+.footer__logo-confidentiality {
+  max-width: 199px;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgb(22, 21, 79);
+}
+.footer__logo-confidentiality span {
+  text-decoration-line: underline;
+}
+.footer__company-box {
+  margin-right: 153px;
+}
+.footer__company-content {
+  gap: 30px;
+}
+.footer__company-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(22, 21, 79);
+  text-wrap: nowrap;
+}
+.footer__company-link:hover {
+  color: rgb(13, 100, 201);
+}
+.footer__address-box {
+  margin-right: 116px;
+}
+.footer__address-list {
+  margin-bottom: 26px;
+  gap: 5px;
+}
+.footer__address-item {
+  font-size: 16px;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+.footer__address-links {
+  gap: 24px;
+}
+.footer__address-link {
+  display: flex;
+  gap: 17px;
+}
+.footer__address-link p {
+  font-size: 14px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  color: rgb(22, 21, 79);
+}
+.footer__address-link:hover p {
+  color: rgb(13, 100, 201);
+}
+.footer__address-link:hover svg path {
+  fill: rgb(13, 100, 201);
+}
+.footer__phones-list {
+  gap: 5px;
+  margin-bottom: 43px;
+}
+.footer__phones-item {
+  font-size: 16px;
+  font-weight: 500;
+  text-wrap: nowrap;
+  color: rgb(22, 21, 79);
+}
+.footer__phones-button {
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 11px;
+  background: rgb(194, 196, 199);
+  border: 0;
+  box-sizing: border-box;
+  width: 194px;
+  height: 48px;
+}
+.footer__phones-button:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: rgb(13, 100, 201);
+}
+.footer__phones-button:active {
+  color: rgb(13, 100, 201);
+  background-color: rgb(255, 255, 255);
+  border: 1.5px solid rgb(13, 100, 201);
+}
+.footer__bottom-line {
+  width: 100vw;
+  height: 72px;
+  background-color: rgb(22, 21, 79);
 }/*# sourceMappingURL=style.css.map */

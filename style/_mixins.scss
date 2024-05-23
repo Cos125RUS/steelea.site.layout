@@ -33,7 +33,7 @@
     font-weight: $weight;
 }
 
-@mixin background-img($img) {
+@mixin background-img($img, $opacity) {
     position: relative;
 
     &__background {
@@ -48,7 +48,7 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, $opacity);
             z-index: -2;
             top: 0;
         }

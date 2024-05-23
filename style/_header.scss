@@ -1,5 +1,5 @@
 .header {
-    @include background-img('../img/header/header-background-big.jpeg');
+    @include background-img('../img/header/header-background-big.jpeg', 0.7);
     min-height: 559px;
     @extend %flex-top-center;
     flex-direction: column;

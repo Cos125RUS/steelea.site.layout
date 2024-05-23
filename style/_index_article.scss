@@ -24,7 +24,7 @@
 }
 
 .index-delivery {
-    @include background-img('../img/index_delivery/background.jpeg');
+    @include background-img('../img/index_delivery/background.jpeg', 0.5);
     @extend %flex-center;
     
     &__content {
@@ -79,7 +79,7 @@
             &:active {
                 background: $whiteColor;
                 color: $blueColor;
-                border: 1px solid $blueColor;
+                border: 1.5px solid $blueColor;
             }
         }
     }

@@ -19,7 +19,6 @@
         @extend %flex-center;
         flex-wrap: wrap;
         gap: 54px;
-
     }
 
     &__card {
@@ -37,6 +36,10 @@
             color: $blackColor;
             @include font(18px, 500);
             padding-bottom: 33px;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 
