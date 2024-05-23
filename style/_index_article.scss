@@ -21,6 +21,11 @@
             margin-bottom: 30px;
         }
     }
+
+    &__icon:hover {
+        transform: rotate(720deg);
+        transition: 1s;
+    }
 }
 
 .index-delivery {

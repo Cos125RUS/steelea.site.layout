@@ -509,6 +509,10 @@ ul {
   opacity: 0.7;
   margin-bottom: 30px;
 }
+.index-services__icon:hover {
+  transform: rotate(720deg);
+  transition: 1s;
+}
 
 .index-delivery {
   position: relative;
