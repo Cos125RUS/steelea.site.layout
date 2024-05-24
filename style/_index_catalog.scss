@@ -59,10 +59,12 @@
             position: relative;
             &-text {
                 position: absolute;
+                animation: rotation-left 6s linear infinite;
             }
 
             &-chamomile {
                 position: absolute;
+                animation: rotation-right 7s linear infinite;
             }
         }
 
@@ -73,15 +75,6 @@
             & .index-catalog__card-hover {
                 animation: appearance 1s forwards;
                 display: block;
-            }
-            & .index-catalog__card-animation {
-                &-chamomile {
-                    animation: rotation-right 7s linear infinite;
-                }
-
-                &-text {
-                    animation: rotation-left 6s linear infinite;
-                }
             }
         }
 
