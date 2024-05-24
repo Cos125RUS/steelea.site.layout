@@ -23,8 +23,7 @@
     }
 
     &__icon:hover {
-        transform: rotate(5760deg);
-        transition: 10s;
+        animation: rotation-right 0.5s linear infinite;
     }
 }
 

@@ -506,10 +506,10 @@ ul {
   display: block;
 }
 .index-catalog__card:hover .index-catalog__card-animation-chamomile {
-  animation: rotation-right 5s linear infinite;
+  animation: rotation-right 7s linear infinite;
 }
 .index-catalog__card:hover .index-catalog__card-animation-text {
-  animation: rotation-left 5s linear infinite;
+  animation: rotation-left 6s linear infinite;
 }
 .index-catalog__card:not(:hover) {
   transition: 0.5s;
@@ -595,8 +595,7 @@ ul {
   margin-bottom: 30px;
 }
 .index-services__icon:hover {
-  transform: rotate(5760deg);
-  transition: 10s;
+  animation: rotation-right 0.5s linear infinite;
 }
 
 .index-delivery {
