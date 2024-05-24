@@ -1,25 +1,24 @@
 .header {
     @include background-img('../img/header/header-background-big.jpeg', 0.7);
     min-height: 559px;
-    @extend %flex-top-center;
-    flex-direction: column;
+    @extend %flex-column-center;
+    justify-content: space-between;
     border-bottom: 10px solid $blueColor;
 
     &__top {
-        margin-left: 96px;
-        margin-right: 96px;
         max-width: 1440px;
         z-index: 1;
-        margin-bottom: 117px;
+        width: 100%;
 
         &-nav {
             padding-top: 27px;
-            @extend %flex-top-center;
+            width: 100%;
+            @extend %flex-sa-center;
         }
     }
 
     &__logo {
-        margin-right: 20px;
+        // margin-right: 20px;
 
         &:hover {
             cursor: pointer;
@@ -28,7 +27,7 @@
 
     &__sections {
         display: flex;
-        margin-right: 72px;
+        // margin-right: 72px;
         cursor: pointer;
 
         &-link {
@@ -45,7 +44,7 @@
     }
 
     &__user-interface {
-        margin-right: 48px;
+        // margin-right: 48px;
     }
 
     &__icons {
@@ -54,7 +53,7 @@
     }
 
     &__cart {
-        margin-right: 35px;
+        // margin-right: 35px;
         position: relative;
 
         &-background {

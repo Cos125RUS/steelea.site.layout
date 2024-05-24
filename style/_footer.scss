@@ -1,14 +1,15 @@
 .footer {
     min-width: 100vw;
-    // min-height: 365px;
 
     @extend %flex-column-center-center;
 
     &__box {
         max-width: 1440px;
         min-height: 365px;
-        padding: 62px 113px 62px 141px;
-        @extend %flex-center;
+        padding: 62px 0 62px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
     }
 
     &__card {
@@ -30,7 +31,7 @@
             min-width: 304px;
             @extend %flex-column;
             gap: 96px;
-            margin-right: 95px;
+            // margin-right: 95px;
         }
 
         &-top {
@@ -60,7 +61,7 @@
 
     &__company {
         &-box {
-            margin-right: 153px;
+            // margin-right: 153px;
         }
 
         &-content {
@@ -81,7 +82,7 @@
 
     &__address {
         &-box {
-            margin-right: 116px;
+            // margin-right: 116px;
         }
 
         &-list {
