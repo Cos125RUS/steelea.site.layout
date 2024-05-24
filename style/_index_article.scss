@@ -23,13 +23,13 @@
     }
 
     &__icon:hover {
-        transform: rotate(1440deg);
-        transition: 1s;
+        transform: rotate(5760deg);
+        transition: 10s;
     }
 }
 
 .index-delivery {
-    @include background-img('../img/index_delivery/background.jpeg', 0.5);
+    @include background-img('../img/index_delivery/background.jpeg', 0.7);
     @extend %flex-center;
     
     &__content {

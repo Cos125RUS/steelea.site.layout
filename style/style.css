@@ -4,8 +4,46 @@
     opacity: 1;
   }
   100% {
-    transform: translateX(100px);
+    transform: translateX(10px);
     opacity: 0;
+  }
+}
+@keyframes appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0, 7;
+  }
+}
+@keyframes disappearance {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotation-right {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes rotation-left {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: -180deg;
+  }
+  100% {
+    rotate: -360deg;
   }
 }
 .footer__box, .index-delivery, .index-services, .index-about-us, .index-catalog__cards, .index-catalog, .banner__picture, .header__middle {
@@ -13,7 +51,7 @@
   justify-content: center;
 }
 
-.banner__button, .header__cart::after, .header__sections-link {
+.index-catalog__card-animation, .banner__button, .header__cart::after, .header__sections-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +73,7 @@
   flex-direction: column;
 }
 
-.footer, .index-catalog__card, .index-catalog__box {
+.footer, .index-catalog__card-box, .index-catalog__box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -421,6 +459,18 @@ ul {
   gap: 54px;
 }
 .index-catalog__card {
+  position: relative;
+}
+.index-catalog__card-hover {
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  background: rgba(62, 122, 191, 0.7);
+  display: none;
+}
+.index-catalog__card-box {
   background-color: rgb(255, 255, 255);
   box-sizing: border-box;
   border: 1px solid rgb(255, 255, 255);
@@ -435,13 +485,33 @@ ul {
   font-weight: 500;
   padding-bottom: 33px;
 }
+.index-catalog__card-animation {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.index-catalog__card-animation-text {
+  position: absolute;
+}
+.index-catalog__card-animation-chamomile {
+  position: absolute;
+}
 .index-catalog__card:hover {
   cursor: pointer;
-  transition: 0.2s;
-  transform: scale(1.1);
 }
-.index-catalog__card:not(:hover) {
-  transition: 0.2s;
+.index-catalog__card:hover .index-catalog__card-hover {
+  animation: appearance 0.5s forwards;
+  display: block;
+}
+.index-catalog__card:hover .index-catalog__card-animation-chamomile {
+  animation: rotation-right 5s linear infinite;
+}
+.index-catalog__card:hover .index-catalog__card-animation-text {
+  animation: rotation-left 5s linear infinite;
+}
+.index-catalog__card:not(:hover) .index-catalog__card-hover {
+  animation: disappearance 0.5s forwards;
+  display: block;
 }
 
 .index-about-us__box {
@@ -520,8 +590,8 @@ ul {
   margin-bottom: 30px;
 }
 .index-services__icon:hover {
-  transform: rotate(1440deg);
-  transition: 1s;
+  transform: rotate(5760deg);
+  transition: 10s;
 }
 
 .index-delivery {
@@ -539,7 +609,7 @@ ul {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   z-index: -2;
   top: 0;
 }
