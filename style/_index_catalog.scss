@@ -68,8 +68,10 @@
 
         &:hover {
             cursor: pointer;
+            transition: 0.5s;
+            transform: scale(1.1);
             & .index-catalog__card-hover {
-                animation: appearance 0.5s forwards;
+                animation: appearance 1s forwards;
                 display: block;
             }
             & .index-catalog__card-animation {
@@ -83,10 +85,13 @@
             }
         }
 
-        &:not(:hover) .index-catalog__card-hover {
-            animation: disappearance 0.5s forwards;
+        &:not(:hover) {
+            transition: 0.5s;
+            
+            & .index-catalog__card-hover {
+            animation: disappearance 0.7s forwards;
             display: block;
-        }
+        }}
     }
 
 }
