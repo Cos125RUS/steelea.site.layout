@@ -1,9 +1,8 @@
 .header {
     @include background-img('../img/header/header-background-big.jpeg', 0.7);
-    min-height: 559px;
     @extend %flex-column-center;
     justify-content: space-between;
-    border-bottom: 10px solid $blueColor;
+    min-height: 138px;
 
     &__top {
         max-width: 1440px;
@@ -43,9 +42,9 @@
         }
     }
 
-    &__user-interface {
-        // margin-right: 48px;
-    }
+    // &__user-interface {
+    //     // margin-right: 48px;
+    // }
 
     &__icons {
         display: flex;
@@ -105,6 +104,11 @@
         width: 100vw;
         @extend %flex-center;
     }
+}
+
+.index-header {
+    min-height: 559px;
+    border-bottom: 10px solid $blueColor;
 }
 
 .search {
