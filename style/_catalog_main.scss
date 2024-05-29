@@ -144,6 +144,21 @@
                 box-sizing: border-box;
                 border: 1px solid $whiteColor;
                 border-radius: 28px;
+                padding: 25px;
+            }
+
+            &-title {
+                color: $blueColor;
+                @include font (18px, 500);
+                margin-left: 13px;
+            }
+        }
+    }
+
+    &-options {
+        &__weight {
+            &-box {
+                
             }
         }
     }

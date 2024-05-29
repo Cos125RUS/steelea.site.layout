@@ -801,8 +801,14 @@ ul {
   box-sizing: border-box;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 28px;
+  padding: 25px;
 }
-
+.catalog-main__product-title {
+  color: rgb(13, 100, 201);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 13px;
+}
 .current-item {
   box-sizing: border-box;
   border: 1px solid rgb(255, 255, 255);
