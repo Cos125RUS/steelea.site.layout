@@ -60,9 +60,9 @@
     }
 
     &__company {
-        &-box {
-            // margin-right: 153px;
-        }
+        // &-box {
+        //     // margin-right: 153px;
+        // }
 
         &-content {
             @extend %flex-column;
@@ -81,9 +81,9 @@
     }
 
     &__address {
-        &-box {
-            // margin-right: 116px;
-        }
+        // &-box {
+        //     // margin-right: 116px;
+        // }
 
         &-list {
             margin-bottom: 26px;

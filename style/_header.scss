@@ -59,15 +59,15 @@
             border-radius: 0px 0px 11px 11px;
             background: $blueColor;
             position: absolute;
-            height: 98px;
-            width: 65px;
+            height: 90px;
+            width: 50px;
             z-index: 0;
-            top: -40px;
+            top: -43px;
             z-index: -1;
         }
 
         &-icon {
-            margin: 17px;
+            margin: 10px;
         }
 
         &::after {
@@ -82,7 +82,7 @@
             background: $yellowColor;
             @extend %flex-center-center;
             top: -26px;
-            left: 17px;
+            left: 13px;
         }
     }
 

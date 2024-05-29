@@ -94,14 +94,14 @@
 
     &__icon {
         &-box {
-            width: 65px;
-            height: 98px;
+            width: 50px;
+            height: 90px;
             background-color: $blueColor;
             border-radius: 0px 0px 11px 11px;
             @extend %flex-center-end;
         }
 
-        margin: 15px;
+        margin-bottom: 10px;
 
         &:hover {
             cursor: pointer;

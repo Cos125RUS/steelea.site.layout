@@ -225,14 +225,14 @@ ul {
   border-radius: 0px 0px 11px 11px;
   background: rgb(13, 100, 201);
   position: absolute;
-  height: 98px;
-  width: 65px;
+  height: 90px;
+  width: 50px;
   z-index: 0;
-  top: -40px;
+  top: -43px;
   z-index: -1;
 }
 .header__cart-icon {
-  margin: 17px;
+  margin: 10px;
 }
 .header__cart::after {
   content: "2";
@@ -246,7 +246,7 @@ ul {
   border-radius: 11px 11px 11px 5px;
   background: rgb(178, 245, 34);
   top: -26px;
-  left: 17px;
+  left: 13px;
 }
 .header__info {
   white-space: nowrap;
@@ -462,6 +462,7 @@ ul {
 .index-catalog {
   border-bottom: 1.5px solid rgb(194, 196, 199);
   background: linear-gradient(0deg, rgb(249, 249, 249) 51.616%, rgb(213, 217, 217) 198.516%);
+  position: relative;
 }
 .index-catalog__box {
   max-width: 1440px;
@@ -532,6 +533,14 @@ ul {
 .index-catalog__card:not(:hover) .index-catalog__card-hover {
   animation: disappearance 0.7s forwards;
   display: block;
+}
+.index-catalog__tape {
+  position: absolute;
+  min-width: 50px;
+  min-height: 90px;
+  background-color: rgb(13, 100, 201);
+  border-radius: 0 0 11px 11px;
+  margin-left: 900px;
 }
 
 .index-about-us__box {
@@ -684,11 +693,11 @@ ul {
   border: 1.5px solid rgb(13, 100, 201);
 }
 .index-article__icon {
-  margin: 15px;
+  margin-bottom: 10px;
 }
 .index-article__icon-box {
-  width: 65px;
-  height: 98px;
+  width: 50px;
+  height: 90px;
   background-color: rgb(13, 100, 201);
   border-radius: 0px 0px 11px 11px;
 }
