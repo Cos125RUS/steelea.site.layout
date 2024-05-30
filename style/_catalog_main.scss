@@ -4,20 +4,57 @@
     &-top {
         min-height: 115px;
         border-bottom: 1.5px solid $grayColor;
-        @extend %flex-center-center;
+        @extend %flex-center;
+        gap: 55px;
 
-        &__box {
-            max-width: 1440px;
-            width: 100%;
-            @extend %flex-sb-center;
-        }
+        // &__box {
+        //     max-width: 1440px;
+        //     width: 100%;
+        //     @extend %flex-sb-center;
+        // }
 
-        &__half {
-            width: 50%;
-        }
+        // &__half {
+        //     width: 50%;
+        // }
 
         &__left {
             @extend %flex-sa-center;
+        }
+
+        &__price {
+            &-box {
+                @extend %flex-center-center;
+                gap: 10px;
+                min-width: 260px;
+
+                &:hover {
+                    & p {
+                        color: $blueColor;
+                    }
+    
+                    & svg path {
+                        fill: $blueColor;
+                    }
+                }
+
+                &:active {
+                    & p {
+                        color: $yellowColor;
+                    }
+    
+                    & svg path {
+                        fill: $yellowColor;
+                    }
+                }
+            }
+
+            &-text {
+                @include font(14px, 700);
+                max-width: 64px;
+                min-height: 42px;
+                line-height: 1.5em;
+                color: $blackColor;
+            }
         }
 
         &__title {
@@ -27,7 +64,8 @@
         }
 
         &__right {
-            @extend %flex-center-center;
+            @extend %flex-sb-center;
+            min-width: 823px;
         }
 
         &__breadcrumbs {
@@ -49,6 +87,7 @@
 
                     &:hover {
                         cursor: pointer;
+                        color: $blueColor
                     }
                 }
             }
@@ -57,8 +96,6 @@
     }
 
     &-main {
-        max-width: 1440px;
-        width: 100%;
         @extend %flex-center;
         padding: 28px 0 64px;
         gap: 55px;

@@ -73,16 +73,16 @@
         &::after {
             content: '2';
             color: $blueColor;
-            @include font(14px, 700);
+            @include font(16px, 700);
             position: absolute;
-            width: 30px;
-            height: 30px;
+            min-width: 30px;
+            min-height: 30px;
             box-sizing: border-box;
             border-radius: 11px 11px 11px 5px;
             background: $yellowColor;
             @extend %flex-center-center;
             top: -26px;
-            left: 13px;
+            left: 12px;
         }
     }
 

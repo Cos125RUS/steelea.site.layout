@@ -58,6 +58,7 @@
             height: 100%;
             @extend %flex-center-center;
             position: relative;
+
             &-text {
                 position: absolute;
                 animation: rotation-left 6s linear infinite;
@@ -73,6 +74,7 @@
             cursor: pointer;
             transition: 0.5s;
             transform: scale(1.1);
+
             & .index-catalog__card-hover {
                 animation: appearance 1s forwards;
                 display: block;
@@ -81,11 +83,12 @@
 
         &:not(:hover) {
             transition: 0.5s;
-            
+
             & .index-catalog__card-hover {
-            animation: disappearance 0.7s forwards;
-            display: block;
-        }}
+                animation: disappearance 0.7s forwards;
+                display: block;
+            }
+        }
     }
 
     &__tape {
@@ -95,5 +98,27 @@
         background-color: $blueColor;
         border-radius: 0 0 11px 11px;
         margin-left: 900px;
+        padding-bottom: 10px;
+        @extend %flex-center-end;
+
+        &-link {
+            @extend %flex-column-center-end;
+            gap: 10px;
+
+            &:hover {
+                & p {
+                    color: $yellowColor;
+                }
+
+                & svg path {
+                    fill: $yellowColor;
+                }
+            }
+        }
+
+        &-text {
+            @include font(14px, 700);
+            color: $whiteColor;
+        }
     }
 }
