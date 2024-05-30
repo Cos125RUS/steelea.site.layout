@@ -7,16 +7,6 @@
         @extend %flex-center;
         gap: 55px;
 
-        // &__box {
-        //     max-width: 1440px;
-        //     width: 100%;
-        //     @extend %flex-sb-center;
-        // }
-
-        // &__half {
-        //     width: 50%;
-        // }
-
         &__left {
             @extend %flex-sa-center;
         }
@@ -31,7 +21,7 @@
                     & p {
                         color: $blueColor;
                     }
-    
+
                     & svg path {
                         fill: $blueColor;
                     }
@@ -41,7 +31,7 @@
                     & p {
                         color: $yellowColor;
                     }
-    
+
                     & svg path {
                         fill: $yellowColor;
                     }
@@ -189,14 +179,46 @@
                 @include font (18px, 500);
                 margin-left: 13px;
             }
+
+            &-content {
+                display: flex;
+                gap: 52px;
+            }
+
+            &-option {
+                @extend %flex-column-end-end;
+                position: relative;
+
+                &>* {
+                    @include font(14px, 400);
+                }
+
+                &>select {
+                    min-width: 81px;
+                    min-height: 30px;
+                    border: 0;
+                    text-align: center;
+                    appearance: none;
+                    background-color: inherit;
+                    z-index: 3;
+                    border-radius: 11px;
+
+                    // &:focus{
+                    //     border-radius: 11px 11px 0 0;
+                    // }
+
+                    & option {
+                        background-color: $grayColor;
+                    }
+                }
+
+            }
         }
     }
 
     &-options {
         &__weight {
-            &-box {
-                
-            }
+            &-box {}
         }
     }
 }
@@ -224,6 +246,35 @@
 
         &:hover {
             color: $whiteColor;
+            cursor: auto;
         }
+    }
+}
+
+.option {
+    &-arrow {
+        position: absolute;
+        z-index: 3;
+        left: 60px;
+        bottom: 11px;
+
+        &__background {
+            background-color: $grayColor;
+            min-width: 30px;
+            min-height: 30px;
+            border-radius: 11px;
+            position: absolute;
+            z-index: 2;
+        }
+    }
+
+    &-background {
+        min-width: 81px;
+        min-height: 30px;
+        background: rgba(183, 191, 202, 0.5);
+        box-sizing: border-box;
+        border-radius: 11px;
+        position: absolute;
+        z-index: 1;
     }
 }
