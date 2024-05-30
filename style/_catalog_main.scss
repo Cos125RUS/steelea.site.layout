@@ -186,32 +186,12 @@
             }
 
             &-option {
-                @extend %flex-column-end-end;
+                @extend %flex-column-start-end;
                 position: relative;
 
                 &>* {
                     @include font(14px, 400);
                 }
-
-                &>select {
-                    min-width: 81px;
-                    min-height: 30px;
-                    border: 0;
-                    text-align: center;
-                    appearance: none;
-                    background-color: inherit;
-                    z-index: 3;
-                    border-radius: 11px;
-
-                    // &:focus{
-                    //     border-radius: 11px 11px 0 0;
-                    // }
-
-                    & option {
-                        background-color: $grayColor;
-                    }
-                }
-
             }
         }
     }
@@ -252,23 +232,82 @@
 }
 
 .option {
-    &-arrow {
+    &__details {
+        min-width: 81px;
+        min-height: 30px;
+        border: 0;
+        text-align: center;
+        z-index: 4;
+        border-radius: 11px;
+        margin-top: 6px;
+
+        &[open]~.option__background {
+            border-radius: 11px 11px 0 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__summary {
+        min-width: 81px;
+        min-height: 30px;
+        list-style: none;
+        @extend %flex-top-center;
+        padding-left: 28px;
+    }
+
+    &__ul {
+        min-width: 81px;
+        min-height: 30px;
+        background: rgba(183, 191, 202, 0.5);
+        border-radius: 0 0 11px 11px;
+    }
+
+    &__li {
+        &:hover, &>*:hover {
+            cursor: pointer;
+            background-color: $hardGrayColor;
+            color: $whiteColor;
+
+            &:last-child {
+                border-radius: 0 0 11px 11px;
+            }
+        }
+    }
+
+    &__label {
+        @extend %flex-center;
+        width: 81px;
+
+        &+input:checked {
+
+        }
+    }
+
+    &__input {
+        appearance: none;
+    }
+
+    &__arrow {
         position: absolute;
         z-index: 3;
         left: 60px;
-        bottom: 11px;
+        top: 35px;
 
-        &__background {
+        &-background {
             background-color: $grayColor;
             min-width: 30px;
             min-height: 30px;
             border-radius: 11px;
             position: absolute;
             z-index: 2;
+            top: 23px;
         }
     }
 
-    &-background {
+    &__background {
         min-width: 81px;
         min-height: 30px;
         background: rgba(183, 191, 202, 0.5);
@@ -276,5 +315,6 @@
         border-radius: 11px;
         position: absolute;
         z-index: 1;
+        top: 23px;
     }
 }
