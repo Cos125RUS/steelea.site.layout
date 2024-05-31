@@ -68,7 +68,7 @@
   align-items: center;
 }
 
-.catalog-main__product-section-options {
+.counts__option, .catalog-main__product-section-options {
   display: flex;
   justify-content: end;
 }
@@ -89,6 +89,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 }
 
 .footer__phones-list, .footer__address-links, .footer__address-list, .footer__company-content, .footer__logo-box, .catalog-main__product-ul, .index-about-us__nav-ul {
@@ -910,6 +916,15 @@ ul {
   font-size: 14px;
   font-weight: 400;
 }
+.catalog-main__product-button {
+  min-height: 30px;
+  min-width: 186px;
+  background: rgb(194, 196, 199);
+  font-size: 14px;
+  font-weight: 700;
+  border: 0;
+  border-radius: 11px;
+}
 
 .current-item {
   box-sizing: border-box;
@@ -1084,6 +1099,7 @@ ul {
 
 .counts__box {
   gap: 6px;
+  margin-bottom: 13px;
 }
 .counts__count {
   min-width: 100px;
@@ -1115,6 +1131,31 @@ ul {
 }
 .counts__count button:hover {
   cursor: pointer;
+}
+.counts__option {
+  position: relative;
+}
+.counts__option-details {
+  margin-top: 0;
+}
+.counts__option-background, .counts__option-arrow-background {
+  top: 0px;
+}
+.counts__option-arrow {
+  top: 13px;
+}
+
+.total {
+  min-width: 100%;
+  margin-bottom: 10px;
+}
+.total > h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.total > p {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .footer {

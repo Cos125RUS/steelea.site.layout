@@ -224,6 +224,15 @@
                     @include font(14px, 400);
                 }
             }
+
+            &-button {
+                min-height: 30px;
+                min-width: 186px;
+                background: $grayColor;
+                @include font(14px, 700);
+                border: 0;
+                border-radius: 11px;
+            }
         }
     }
 }
@@ -443,6 +452,7 @@
     &__box {
         @extend %flex-center;
         gap: 6px;
+        margin-bottom: 13px;
     }
 
     &__count {
@@ -479,5 +489,36 @@
                 cursor: pointer;
             }
         }
+    }
+
+    &__option {
+        position: relative;
+        @extend %flex-end;
+
+        &-details {
+            margin-top: 0;
+        }
+
+        &-background, &-arrow-background {
+            top: 0px;
+        }
+
+        &-arrow {
+            top: 13px;
+        }
+    }
+}
+
+.total {
+    @extend %flex-sb-end;
+    min-width: 100%;
+    margin-bottom: 10px;
+
+    &>h4 {
+        @include font(14px, 400);
+    }
+
+    &>p {
+        @include font(18px, 700);
     }
 }
