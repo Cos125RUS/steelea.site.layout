@@ -21,18 +21,46 @@
 }
 
 @keyframes disappearance {
-    0% {opacity: 0.7;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes rotation-right {
-    0% {rotate: 0deg;}
-    50% {rotate: 180deg;}
-    100% {rotate: 360deg;}
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: 180deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
 }
 
 @keyframes rotation-left {
-    0% {rotate: 0deg;}
-    50% {rotate: -180deg;}
-    100% {rotate: -360deg;}
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: -180deg;
+    }
+
+    100% {
+        rotate: -360deg;
+    }
 }
+
+@keyframes switch-on {
+    0% { background-color: $grayColor; }
+    100% { background-color: $blueColor; }
+}
+
+@keyframes switch-off {}

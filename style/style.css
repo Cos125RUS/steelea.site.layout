@@ -46,12 +46,21 @@
     rotate: -360deg;
   }
 }
-.option__label, .catalog-main, .catalog-top, .index-delivery, .index-services, .index-about-us, .index-catalog__cards, .index-catalog, .banner__picture, .header__middle {
+@keyframes switch-on {
+  0% {
+    background-color: rgb(194, 196, 199);
+  }
+  100% {
+    background-color: rgb(13, 100, 201);
+  }
+}
+@keyframes switch-off {}
+.option__li, .catalog-main, .catalog-top, .index-delivery, .index-services, .index-about-us, .index-catalog__cards, .index-catalog, .banner__picture, .header__middle {
   display: flex;
   justify-content: center;
 }
 
-.current-item, .catalog-main__promotion, .catalog-top__price-box, .index-catalog__card-animation, .banner__button, .header__cart::after, .header__sections-link, .intro {
+.current-item, .catalog-main__product-options, .catalog-main__promotion, .catalog-top__price-box, .index-catalog__card-animation, .banner__button, .header__cart::after, .header__sections-link, .intro {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +75,11 @@
 .option__summary, .catalog-main__item, .search-box {
   display: flex;
   align-items: center;
+}
+
+.catalog-main__product-options-section {
+  display: flex;
+  justify-content: end;
 }
 
 .catalog-top__left, .header__top-nav {
@@ -870,6 +884,14 @@ ul {
   display: flex;
   gap: 52px;
 }
+.catalog-main__product-options {
+  min-height: 100%;
+}
+.catalog-main__product-options-section {
+  gap: 45px;
+  max-width: 207px;
+  flex-wrap: wrap;
+}
 .catalog-main__product-option {
   position: relative;
 }
@@ -877,6 +899,7 @@ ul {
   font-size: 14px;
   font-weight: 400;
 }
+
 .current-item {
   box-sizing: border-box;
   border: 1px solid rgb(255, 255, 255);
@@ -910,6 +933,7 @@ ul {
   z-index: 4;
   border-radius: 11px;
   margin-top: 6px;
+  position: relative;
 }
 .option__details[open] ~ .option__background {
   border-radius: 11px 11px 0 0;
@@ -928,6 +952,7 @@ ul {
   min-height: 30px;
   background: rgba(183, 191, 202, 0.5);
   border-radius: 0 0 11px 11px;
+  position: absolute;
 }
 .option__li:hover, .option__li > *:hover {
   cursor: pointer;
@@ -935,6 +960,13 @@ ul {
   color: rgb(255, 255, 255);
 }
 .option__li:hover:last-child, .option__li > *:hover:last-child {
+  border-radius: 0 0 11px 11px;
+}
+.option__li > input:checked ~ label {
+  background-color: rgb(105, 106, 106);
+  color: rgb(255, 255, 255);
+}
+.option__li:last-child > input:checked ~ label {
   border-radius: 0 0 11px 11px;
 }
 .option__label {
@@ -969,6 +1001,57 @@ ul {
   position: absolute;
   z-index: 1;
   top: 23px;
+}
+.option__switch {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  min-width: 81px;
+  min-height: 30px;
+  margin-top: 6px;
+  cursor: pointer;
+  z-index: 3;
+}
+.option__switch-frame {
+  position: absolute;
+  min-width: 81px;
+  min-height: 30px;
+  box-sizing: border-box;
+  border: 1.5px solid rgb(194, 196, 199);
+  border-radius: 30px;
+  top: 23px;
+  z-index: 1;
+}
+.option__switch-ball {
+  position: absolute;
+  background-color: rgb(194, 196, 199);
+  min-height: 24px;
+  min-width: 24px;
+  top: 26px;
+  left: 4px;
+  border: 0;
+  border-radius: 50%;
+  z-index: 2;
+}
+.option__switch:checked ~ .option__switch-frame {
+  border: 1.5px solid rgb(13, 100, 201);
+  background: rgba(112, 163, 222, 0.5);
+  transition: all 0.5s;
+}
+.option__switch:checked ~ .option__switch-ball {
+  background-color: rgb(13, 100, 201);
+  left: 53px;
+  transition: all 0.5s;
+}
+.option__switch:not(:checked) ~ .option__switch-frame {
+  border: 1.5px solid rgb(194, 196, 199);
+  background: rgb(255, 255, 255);
+  transition: all 0.5s;
+}
+.option__switch:not(:checked) ~ .option__switch-ball {
+  background-color: rgb(194, 196, 199);
+  left: 4px;
+  transition: all 0.5s;
 }
 
 .footer {

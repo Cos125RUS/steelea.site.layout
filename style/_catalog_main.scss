@@ -185,6 +185,18 @@
                 gap: 52px;
             }
 
+            &-options {
+                @extend %flex-center-center;
+                min-height: 100%;
+
+                &-section {
+                    @extend %flex-end;
+                    gap: 45px;
+                    max-width: 207px;
+                    flex-wrap: wrap;
+                }
+            }
+
             &-option {
                 @extend %flex-column-start-end;
                 position: relative;
@@ -193,12 +205,6 @@
                     @include font(14px, 400);
                 }
             }
-        }
-    }
-
-    &-options {
-        &__weight {
-            &-box {}
         }
     }
 }
@@ -240,6 +246,7 @@
         z-index: 4;
         border-radius: 11px;
         margin-top: 6px;
+        position: relative;
 
         &[open]~.option__background {
             border-radius: 11px 11px 0 0;
@@ -263,10 +270,14 @@
         min-height: 30px;
         background: rgba(183, 191, 202, 0.5);
         border-radius: 0 0 11px 11px;
+        position: absolute;
     }
 
     &__li {
-        &:hover, &>*:hover {
+        @extend %flex-center;
+
+        &:hover,
+        &>*:hover {
             cursor: pointer;
             background-color: $hardGrayColor;
             color: $whiteColor;
@@ -275,15 +286,20 @@
                 border-radius: 0 0 11px 11px;
             }
         }
+
+        &>input:checked~label {
+            background-color: $hardGrayColor;
+            color: $whiteColor;
+
+        }
+
+        &:last-child>input:checked~label {
+            border-radius: 0 0 11px 11px;
+        }
     }
 
     &__label {
-        @extend %flex-center;
         width: 81px;
-
-        &+input:checked {
-
-        }
     }
 
     &__input {
@@ -317,4 +333,69 @@
         z-index: 1;
         top: 23px;
     }
+
+    &__switch {
+        appearance: none;
+        min-width: 81px;
+        min-height: 30px;
+        margin-top: 6px;
+        cursor: pointer;
+        z-index: 3;
+
+        &-frame {
+            position: absolute;
+            min-width: 81px;
+            min-height: 30px;
+            box-sizing: border-box;
+            border: 1.5px solid $grayColor;
+            border-radius: 30px;
+            top: 23px;
+            z-index: 1;
+        }
+
+        &-ball {
+            position: absolute;
+            background-color: $grayColor;
+            min-height: 24px;
+            min-width: 24px;
+            top: 26px;
+            left: 4px;
+            border: 0;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        &:checked {
+            &~.option__switch-frame {
+                border: 1.5px solid $blueColor;
+                background: rgba(112, 163, 222, 0.5);
+                transition: all 0.5s;
+
+            }
+
+            &~.option__switch-ball {
+                background-color: $blueColor;
+                left: 53px;
+                transition: all 0.5s;
+                // animation: switch-on 0.5s;
+
+            }
+        }
+
+        &:not(:checked) {
+            &~.option__switch-frame {
+                border: 1.5px solid $grayColor;
+                background: $whiteColor;
+                transition: all 0.5s;
+            }
+
+            &~.option__switch-ball {
+                background-color: $grayColor;
+                left: 4px;
+                transition: all 0.5s;
+            }
+        }
+    }
+
+
 }
