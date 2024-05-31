@@ -57,10 +57,3 @@
         rotate: -360deg;
     }
 }
-
-@keyframes switch-on {
-    0% { background-color: $grayColor; }
-    100% { background-color: $blueColor; }
-}
-
-@keyframes switch-off {}
