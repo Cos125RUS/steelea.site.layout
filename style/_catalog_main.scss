@@ -196,17 +196,15 @@
 
             &-section {
                 &-options {
-                    @extend %flex-end;
-                    gap: 45px;
+                    @extend %flex-column;
+                    gap: 21px;
                     max-width: 247px;
-                    flex-wrap: wrap;
                     padding-right: 39px;
                     border-right: 1.5px solid $grayColor;
                 }
 
                 &-counts {
                     min-width: 186px;
-                    min-height: 151px;
                     @extend %flex-column-center-sb;
                 }
             }
@@ -217,6 +215,11 @@
 
                 &>* {
                     @include font(14px, 400);
+                }
+
+                &-top, &-bottom {
+                    display: flex;
+                    gap: 45px;
                 }
             }
 
