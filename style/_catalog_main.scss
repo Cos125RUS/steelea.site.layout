@@ -145,13 +145,16 @@
 
         &__promotion {
             @extend %flex-center-center;
-            height: 239px;
-            width: 239px;
+            min-height: 239px;
+            max-width: 90px;
             background: $whiteColor;
             color: $darkblueColor;
             box-sizing: border-box;
             border: 1px solid $whiteColor;
             border-radius: 27px;
+            @include font(14px, 400);
+            padding: 0 calc(237px/2);
+            text-align: center;
 
             &:hover {
                 color: $yellowColor;
@@ -203,16 +206,8 @@
 
                 &-counts {
                     min-width: 186px;
-                    min-height: 200px;
-                    @extend %flex-column-center-center;
-
-                    &>* {
-                        @include font(14px, 400);
-                    }
-
-                    &>h4 {
-                        margin-bottom: 6px;
-                    }
+                    min-height: 151px;
+                    @extend %flex-column-center-sb;
                 }
             }
 
@@ -232,6 +227,12 @@
                 @include font(14px, 700);
                 border: 0;
                 border-radius: 11px;
+                
+                &:hover {
+                    cursor: pointer;
+                    background-color: $blueColor;
+                    color: $whiteColor;
+                }
             }
         }
     }
@@ -291,6 +292,7 @@
         list-style: none;
         @extend %flex-top-center;
         padding-left: 28px;
+        @include font(14px, 400);
     }
 
     &__ul {
@@ -327,6 +329,7 @@
 
     &__label {
         width: 81px;
+        @include font(14px, 400);
     }
 
     &__input {
@@ -449,6 +452,14 @@
 }
 
 .counts {
+    &__top {
+        &>h4 {
+            @include font(14px, 400);
+            margin-bottom: 6px;
+            text-align: center;
+        }
+    }
+
     &__box {
         @extend %flex-center;
         gap: 6px;
@@ -484,6 +495,7 @@
             background-color: initial;
             box-sizing: border-box;
             border-radius: 11px;
+            @extend %flex-center-center;
 
             &:hover {
                 cursor: pointer;
@@ -499,7 +511,8 @@
             margin-top: 0;
         }
 
-        &-background, &-arrow-background {
+        &-background,
+        &-arrow-background {
             top: 0px;
         }
 
@@ -512,7 +525,7 @@
 .total {
     @extend %flex-sb-end;
     min-width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 
     &>h4 {
         @include font(14px, 400);
