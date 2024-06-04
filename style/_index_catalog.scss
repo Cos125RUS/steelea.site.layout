@@ -23,18 +23,6 @@
     }
 
     &__card {
-        position: relative;
-
-        &-hover {
-            position: absolute;
-            box-sizing: border-box;
-            border-radius: 30px;
-            height: 100%;
-            width: 100%;
-            background: $turquoiseColor;
-            display: none;
-        }
-
         &-box {
             @extend %flex-column-center-center;
             background-color: $whiteColor;
@@ -51,43 +39,6 @@
             color: $blackColor;
             @include font(18px, 500);
             padding-bottom: 33px;
-        }
-
-        &-animation {
-            width: 100%;
-            height: 100%;
-            @extend %flex-center-center;
-            position: relative;
-
-            &-text {
-                position: absolute;
-                animation: rotation-left 6s linear infinite;
-            }
-
-            &-chamomile {
-                position: absolute;
-                animation: rotation-right 7s linear infinite;
-            }
-        }
-
-        &:hover {
-            cursor: pointer;
-            transition: 0.5s;
-            transform: scale(1.1);
-
-            & .index-catalog__card-hover {
-                animation: appearance 1s forwards;
-                display: block;
-            }
-        }
-
-        &:not(:hover) {
-            transition: 0.5s;
-
-            & .index-catalog__card-hover {
-                animation: disappearance 0.7s forwards;
-                display: block;
-            }
         }
     }
 
