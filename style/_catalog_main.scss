@@ -260,6 +260,7 @@
             background-color: $whiteColor;
             border: 0;
             border-radius: 30px;
+            box-sizing: border-box;
             @extend %flex-column-center-end;
 
             &-img {
@@ -338,7 +339,7 @@
     &__ul {
         min-width: 81px;
         min-height: 30px;
-        background: rgba(183, 191, 202, 0.5);
+        background: rgba(183, 191, 202);
         border-radius: 0 0 11px 11px;
         position: absolute;
     }
