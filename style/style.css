@@ -46,7 +46,7 @@
     rotate: -360deg;
   }
 }
-.counts__box, .option__li, .catalog-main, .catalog-top, .index-delivery, .index-services, .index-about-us, .index-catalog__cards, .index-catalog, .banner__picture, .header__middle {
+.counts__box, .option__li, .catalog-main, .index-delivery, .index-services, .index-about-us, .index-catalog__cards, .index-catalog, .banner__picture, .header__middle, .main-top {
   display: flex;
   justify-content: center;
 }
@@ -79,7 +79,7 @@
   align-items: center;
 }
 
-.catalog-top__left, .header__top-nav {
+.header__top-nav, .main-top__left {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -203,6 +203,18 @@
 .product-card__animation-chamomile {
   position: absolute;
   animation: rotation-right 7s linear infinite;
+}
+
+.main {
+  background: linear-gradient(0deg, rgb(249, 249, 249) 51.616%, rgb(213, 217, 217) 198.516%);
+}
+.main-top {
+  min-height: 115px;
+  border-bottom: 1.5px solid rgb(194, 196, 199);
+  gap: 55px;
+}
+.main-top__left-box {
+  min-width: 260px;
 }
 
 * {
@@ -759,17 +771,8 @@ ul {
   fill: rgb(178, 245, 34);
 }
 
-.catalog {
-  background: linear-gradient(0deg, rgb(249, 249, 249) 51.616%, rgb(213, 217, 217) 198.516%);
-}
-.catalog-top {
-  min-height: 115px;
-  border-bottom: 1.5px solid rgb(194, 196, 199);
-  gap: 55px;
-}
 .catalog-top__price-box {
   gap: 10px;
-  min-width: 260px;
 }
 .catalog-top__price-box:hover p {
   color: rgb(13, 100, 201);
@@ -887,10 +890,16 @@ ul {
   border-radius: 28px;
   padding: 25px;
 }
-.catalog-main__product-title {
-  color: rgb(13, 100, 201);
+.catalog-main__product-link {
   font-size: 18px;
   font-weight: 500;
+  color: rgb(13, 100, 201);
+}
+.catalog-main__product-link:hover {
+  color: rgb(178, 245, 34);
+  cursor: pointer;
+}
+.catalog-main__product-title {
   margin-left: 13px;
 }
 .catalog-main__product-content {

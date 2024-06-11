@@ -84,3 +84,30 @@
 
     }
 }
+
+.main {
+    background: linear-gradient(0.00deg, rgb(249, 249, 249) 51.616%,rgb(213, 217, 217) 198.516%);
+
+    &-top {
+        min-height: 115px;
+        border-bottom: 1.5px solid $grayColor;
+        @extend %flex-center;
+        gap: 55px;
+
+        &__left {
+            @extend %flex-sa-center;
+
+            &-box {
+                min-width: 260px;
+            }
+
+        }
+        
+        // &__title {
+        //     color: $blueColor;
+        //     @include font(24px, 700);
+        //     text-wrap: nowrap;
+        // }
+    }
+
+}
