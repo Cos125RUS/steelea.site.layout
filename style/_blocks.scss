@@ -100,14 +100,42 @@
             &-box {
                 min-width: 260px;
             }
+        }
 
+        &__right {
+            @extend %flex-sb-center;
+            min-width: 823px;
         }
         
-        // &__title {
-        //     color: $blueColor;
-        //     @include font(24px, 700);
-        //     text-wrap: nowrap;
-        // }
-    }
+        &__title {
+            color: $blueColor;
+            @include font(24px, 700);
+            text-wrap: nowrap;
+        }
 
+        &__breadcrumbs {
+            display: flex;
+            gap: 10px;
+
+            & li {
+                @include font(10px, 500);
+                color: $hardGrayColor;
+                text-wrap: nowrap;
+
+                &:last-child {
+                    color: $grayColor;
+                }
+
+                &:not(:last-child) {
+                    border-right: 1px solid $hardGrayColor;
+                    padding-right: 10px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $blueColor
+                    }
+                }
+            }
+        }
+    }
 }
