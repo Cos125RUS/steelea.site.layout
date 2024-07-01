@@ -75,10 +75,42 @@
 
         &__description {
             max-width: 424px;
+            
+            &-title {
+                @include font(14px, 700);
+                padding-bottom: 40px;
+            }
+
+            &-text {
+                @include font(14px, 400);
+                text-align: justify;
+                line-height: 150%;
+            }
         }
 
         &__specifications {
             min-width: 424px;
+
+            &-box {
+                @extend %flex-sb-center;
+
+                &:first-child {
+                    padding-bottom: 17px;
+                }
+                
+                &:not(:first-child) {
+                    border-bottom: 1px solid $grayColor;
+                    min-height: 65px;
+                }
+            }
+
+            &-title {
+                @include font(14px, 700);
+            }
+
+            &-value {
+                @include font(14px, 400);
+            }
         }
     }
 }
