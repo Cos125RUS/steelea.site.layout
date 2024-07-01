@@ -51,7 +51,7 @@
   justify-content: center;
 }
 
-.counts__count button, .option__info-link, .current-item, .catalog-bottom__promotions, .catalog-main__product-sections, .catalog-main__promotion, .catalog-top__price-box, .banner__button, .header__cart::after, .header__sections-link, .intro, .product-card__animation {
+.offer__promotions, .counts__count button, .option__info-link, .current-item, .catalog-main__product-sections, .catalog-main__promotion, .catalog-top__price-box, .banner__button, .header__cart::after, .header__sections-link, .intro, .product-card__animation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,7 +121,7 @@
   align-items: center;
 }
 
-.catalog-bottom__promotion, .index-catalog__tape-link {
+.offer__promotion, .index-catalog__tape-link {
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -944,41 +944,6 @@ ul {
   background-color: rgb(13, 100, 201);
   color: rgb(255, 255, 255);
 }
-.catalog-bottom {
-  min-height: 471px;
-  background: linear-gradient(180deg, rgb(225, 230, 230) 51.659%, rgb(118, 119, 119) 162.471%);
-}
-.catalog-bottom__title {
-  font-size: 24px;
-  font-weight: 700;
-  color: rgb(13, 100, 201);
-  text-align: center;
-  padding-top: 59px;
-  margin-bottom: 46px;
-}
-.catalog-bottom__promotions {
-  gap: 54px;
-}
-.catalog-bottom__promotion {
-  min-width: 239px;
-  min-height: 239px;
-  background-color: rgb(255, 255, 255);
-  border: 0;
-  border-radius: 30px;
-  box-sizing: border-box;
-}
-.catalog-bottom__promotion-img {
-  position: absolute;
-  top: -10px;
-}
-.catalog-bottom__promotion-name {
-  font-size: 18px;
-  font-weight: 500;
-  color: rgb(13, 100, 201);
-  max-width: 180px;
-  text-align: center;
-  padding-bottom: 30px;
-}
 
 .current-item {
   box-sizing: border-box;
@@ -1310,6 +1275,42 @@ ul {
 .product-main__specifications-value {
   font-size: 14px;
   font-weight: 400;
+}
+
+.offer {
+  min-height: 471px;
+  background: linear-gradient(180deg, rgb(225, 230, 230) 51.659%, rgb(118, 119, 119) 162.471%);
+}
+.offer__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(13, 100, 201);
+  text-align: center;
+  padding-top: 59px;
+  margin-bottom: 46px;
+}
+.offer__promotions {
+  gap: 54px;
+}
+.offer__promotion {
+  min-width: 239px;
+  min-height: 239px;
+  background-color: rgb(255, 255, 255);
+  border: 0;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+.offer__promotion-img {
+  position: absolute;
+  top: -10px;
+}
+.offer__promotion-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(13, 100, 201);
+  max-width: 180px;
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 .footer {
