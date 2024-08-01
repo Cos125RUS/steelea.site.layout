@@ -1436,7 +1436,51 @@ ul {
 }
 
 @media (max-width: 1024px) {
-  .header__info {
+  .header {
+    min-height: 143px;
+  }
+  .header__info, .header__sections {
     display: none;
+  }
+  .header__top {
+    max-width: 356px;
+  }
+  .header__top-nav {
+    padding-top: 21px;
+    display: grid;
+    grid-template-areas: "logo logo cart nav" "search search search user";
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 150px 1fr;
+  }
+  .header__logo {
+    grid-area: logo;
+  }
+  .header__cart {
+    grid-area: cart;
+  }
+  .header__cart-background {
+    height: 59px;
+    width: 37px;
+    top: -24px;
+  }
+  .header__cart-icon {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 6px;
+  }
+  .header__cart::after {
+    min-width: 22px;
+    min-height: 22px;
+    font-size: 11px;
+    top: -17px;
+    left: 10px;
+  }
+  .index-header {
+    min-height: 361px;
+    border-bottom: 5px solid rgb(13, 100, 201);
+  }
+  .logo__link > img {
+    height: 40px;
+    width: 146px;
   }
 }/*# sourceMappingURL=style.css.map */
