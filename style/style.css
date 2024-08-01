@@ -1565,4 +1565,15 @@ ul {
     width: 125px;
     height: 30px;
   }
+  .banner__nav-box {
+    gap: 4px;
+    margin-right: 0;
+  }
+  .banner__nav-box > svg {
+    max-height: 5px;
+    max-width: 5px;
+  }
+  .banner__nav-box > svg:first-child {
+    max-width: 25px;
+  }
 }/*# sourceMappingURL=style.css.map */
