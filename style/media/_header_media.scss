@@ -9,20 +9,26 @@
 
         &__top {
             max-width: 356px;
+            display: flex;
+            justify-content: center;
 
             &-nav {
+                max-width: 290px;
                 padding-top: 21px;
                 display: grid;
+                justify-content: space-between;
+                gap: 30px 0;
                 grid-template-areas:
                     "logo logo cart nav"
-                    "search search search user";
-                grid-template-rows: 50px 1fr 30px;
-                grid-template-columns: 150px 1fr;
+                    "ui ui ui ui";
+                grid-template-rows: 40px 28px;
+                grid-template-columns: 146px 11px 37px 30px;
             }
         }
 
         &__logo {
             grid-area: logo;
+            max-height: 40px;
         }
 
         &__cart {
@@ -49,16 +55,114 @@
 
             }
         }
+
+        &__user-interface {
+            grid-area: ui;
+        }
+
+        &__menu {
+            display: inline;
+        }
+
+        &__icons {
+            justify-content: center;
+        }
     }
 
     .index-header {
-        min-height: 361px;
+        max-height: 361px;
         border-bottom: 5px solid $blueColor;
     }
 
     .logo__link>img {
         height: 40px;
         width: 146px;
+    }
+
+    .banner {
+        padding-top: 28px;
+
+        &__info {
+            gap: 18px;
+            margin-bottom: 16px;
+        }
+
+        &__left {
+            min-height: 162px;
+            min-width: 162px;
+            background-image: url('../img/header/banner_small.png');
+        }
+
+        &__picture {
+            display: none;
+        }
+
+        &__title {
+            max-width: 100px;
+            font-size: 12px;
+            text-align: center;
+            margin-bottom: 19px;
+
+            &-name {
+                font-size: 18px;
+            }
+        }
+
+        &__description {
+            display: none;
+        }
+
+        &__right {
+            min-height: 162px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: space-between;
+
+            &-bottom {
+                flex-direction: column;
+                gap: 28px;
+                margin-bottom: 6px;
+            }
+        }
+
+        &__price{
+            &-box {
+                flex-direction: column;
+                padding-right: 0;
+            }
+
+            &-new {
+                font-size: 14px;
+            }
+
+            &-old {
+                font-size: 10px;
+            }
+        }
+
+        &__prices {
+            padding-right: 0;
+            align-items: flex-end;
+            
+            &:first-child {
+                border-right: none;
+            }
+        }
+
+        &__superprice-box {
+            display: none;
+        }
+
+        &__button {
+            font-size: 11px;
+            width: 125px;
+            height: 30px;
+        }
+
+        &__nav {
+            
+        }
     }
 }
 
