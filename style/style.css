@@ -1490,6 +1490,9 @@ ul {
   .header__menu {
     display: inline;
   }
+  .header__menu-label svg:hover {
+    cursor: pointer;
+  }
   .header__icons {
     justify-content: center;
   }
@@ -1575,5 +1578,66 @@ ul {
   }
   .banner__nav-box > svg:first-child {
     max-width: 25px;
+  }
+  .menu-cross {
+    margin: 9px;
+  }
+  .menu-cross:hover {
+    cursor: pointer;
+  }
+  .header-menu__nav {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top: -27px;
+    left: -570px;
+    position: absolute;
+    white-space: nowrap;
+    background-color: rgb(62, 122, 191);
+    padding: 20px 24px;
+  }
+  .header-menu__container {
+    display: flex;
+    justify-content: center;
+  }
+  .header-menu__box {
+    width: 360px;
+  }
+  .header-menu__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+  }
+  .header-menu__animation {
+    position: relative;
+    max-width: 62px;
+    max-height: 59px;
+    padding-top: 31px;
+  }
+  .header-menu__animation svg:last-child {
+    width: 62px;
+    height: 59px;
+  }
+  .header-menu__animation svg:first-child {
+    width: 35px;
+    height: 33px;
+  }
+  .header-menu__cross label {
+    font-size: 0;
+  }
+  .header-menu__bottom {
+    padding-left: 103px;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-menu__options {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+  }
+  .header-menu__options-link {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
   }
 }/*# sourceMappingURL=style.css.map */
