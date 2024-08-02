@@ -766,6 +766,10 @@ ul {
 }
 .index-article__img {
   margin-right: 86px;
+  max-height: 390px;
+  max-width: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .index-article__content {
   margin-right: 50px;
@@ -1743,7 +1747,7 @@ ul {
   }
   .index-about-us__box {
     flex-direction: column;
-    padding: 0 39px 67px 33px;
+    padding: 0 39px 128px 33px;
   }
   .index-about-us__nav-box {
     margin-left: 0;
@@ -1777,7 +1781,47 @@ ul {
   .index-about-us__info-content {
     font-size: 14px;
   }
-  .index-services, .index-delivery {
+  .index-article__box {
+    margin-bottom: 0;
+    padding-left: 0;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+  .index-article__img {
+    margin-right: 0;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .index-article__icon {
+    max-height: 19px;
+  }
+  .index-article__icon-box {
+    position: absolute;
+    right: 65px;
+    top: 0;
+    max-width: 37px;
+    max-height: 56px;
+  }
+  .index-article__content {
+    margin-right: 0;
+    padding: 21px 47px 52px 34px;
+  }
+  .index-article__content-button {
+    max-width: 125px;
+    max-height: 30px;
+    font-size: 11px;
+  }
+  .index-services__content-title {
+    font-size: 19px;
+  }
+  .index-services__content-subtitle {
+    font-size: 18px;
+  }
+  .index-services__content-text {
+    font-size: 14px;
+    margin-bottom: 46px;
+  }
+  .index-delivery {
     display: none;
   }
 }
