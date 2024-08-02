@@ -1739,6 +1739,18 @@ ul {
     display: none;
   }
 }
-.footer {
-  display: none;
+@media (max-width: 1024px) {
+  .catalog {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .product {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .footer {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
