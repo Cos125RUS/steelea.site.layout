@@ -1841,7 +1841,32 @@ ul {
   }
 }
 @media (max-width: 1024px) {
-  .footer {
-    display: none;
+  .footer__box {
+    padding: 27px 29px 24px 39px;
+    min-height: 0;
+    max-width: 100vw;
+    gap: 26px;
+    flex-wrap: wrap;
+  }
+  .footer__box > div {
+    flex: 1;
+  }
+  .footer__logo-box {
+    gap: 16px;
+    align-items: flex-start;
+    min-width: 141px;
+  }
+  .footer__logo-link > svg {
+    max-width: 108px;
+    max-height: 34px;
+  }
+  .footer__logo-confidentiality {
+    font-size: 8px;
+  }
+  .footer__company-box > div h3, .footer__company-box > div a {
+    font-size: 11px;
+  }
+  .footer__bottom-line {
+    height: 36px;
   }
 }/*# sourceMappingURL=style.css.map */
