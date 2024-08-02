@@ -1280,6 +1280,11 @@ ul {
   font-weight: 400;
 }
 
+@media (max-width: 1024px) {
+  .product-card__animation, .product-card__hover {
+    display: none;
+  }
+}
 .offer {
   min-height: 471px;
   background: linear-gradient(180deg, rgb(225, 230, 230) 51.659%, rgb(118, 119, 119) 162.471%);
@@ -1441,6 +1446,7 @@ ul {
 @media (max-width: 1024px) {
   .header {
     min-height: 143px;
+    z-index: 5;
   }
   .header__info, .header__sections {
     display: none;
@@ -1681,10 +1687,30 @@ ul {
   .header-menu__contacts-link > svg > path {
     fill: rgb(255, 255, 255);
   }
-  .index-catalog, .index-about-us, .index-services, .index-delivery {
+}
+@media (max-width: 1024px) {
+  .index-catalog__tape {
     display: none;
   }
-  .footer {
+  .index-catalog__title {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 25px;
+  }
+  .index-catalog__cards {
+    margin: 14px 16px 65px;
+    gap: 9px;
+  }
+  .index-catalog__card-img {
+    max-height: 123px;
+  }
+  .index-catalog__card-name {
+    padding-bottom: 15px;
+  }
+  .index-about-us, .index-services, .index-delivery {
     display: none;
   }
+}
+.footer {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

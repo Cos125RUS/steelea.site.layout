@@ -1,6 +1,7 @@
 @media (max-width: 1024px) {
     .header {
         min-height: 143px;
+        z-index: 5;
 
         &__info,
         &__sections {
@@ -302,20 +303,6 @@
                 }
             }
         }
-    }
-
-    .index {
-
-        &-catalog,
-        &-about-us,
-        &-services,
-        &-delivery {
-            display: none;
-        }
-    }
-
-    .footer {
-        display: none;
     }
 }
 

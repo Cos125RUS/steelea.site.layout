@@ -114,3 +114,15 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .product {
+        &-card {
+            &__animation, &__hover {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {}

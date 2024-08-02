@@ -1,0 +1,42 @@
+@media (max-width: 1024px) {
+    .index {
+        &-catalog {
+            &__tape {
+                display: none;
+            }
+
+            &__title {
+                @include font(19px, 700);
+                margin-top: 25px;
+            }
+
+            &__cards {
+                margin: 14px 16px 65px;
+                gap: 9px;
+            }
+
+            &__card {
+                &-box {
+                    // max-height: 162px;
+                    // max-width: 162px;
+                }
+
+                &-img {
+                    max-height: 123px;
+                }
+
+                &-name {
+                    padding-bottom: 15px;
+                }
+            }
+        }
+
+        &-about-us,
+        &-services,
+        &-delivery {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 767px) {}
