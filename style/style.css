@@ -1692,6 +1692,9 @@ ul {
   }
 }
 @media (max-width: 1024px) {
+  .index-catalog {
+    border-bottom: 0;
+  }
   .index-catalog__tape {
     display: none;
   }
@@ -1735,7 +1738,46 @@ ul {
   .index-catalog__card-name {
     padding-bottom: 15px;
   }
-  .index-about-us, .index-services, .index-delivery {
+  .index-about-us {
+    border-top: 1px solid rgb(194, 196, 199);
+  }
+  .index-about-us__box {
+    flex-direction: column;
+    padding: 0 39px 67px 33px;
+  }
+  .index-about-us__nav-box {
+    margin-left: 0;
+    padding: 0;
+    padding-top: 38px;
+    border-left: 0;
+    flex-basis: 0;
+    gap: 36px;
+  }
+  .index-about-us__nav-ul {
+    gap: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .index-about-us__nav-li {
+    font-size: 11px;
+  }
+  .index-about-us__nav-circle {
+    left: 36px;
+    top: -50px;
+  }
+  .index-about-us__info-box {
+    flex-grow: 0;
+    flex-basis: 0;
+  }
+  .index-about-us__info-title {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  .index-about-us__info-content {
+    font-size: 14px;
+  }
+  .index-services, .index-delivery {
     display: none;
   }
 }
