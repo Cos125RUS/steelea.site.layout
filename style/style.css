@@ -1585,12 +1585,12 @@ ul {
   .menu-cross:hover {
     cursor: pointer;
   }
-  .header-menu__nav {
+  .header-menu {
     display: none;
     width: 100vw;
     height: 100vh;
-    top: -27px;
-    left: -570px;
+    top: 0;
+    left: 0;
     position: absolute;
     white-space: nowrap;
     background-color: rgb(62, 122, 191);
@@ -1634,10 +1634,57 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 19px;
+    margin-bottom: 32px;
   }
   .header-menu__options-link {
     font-size: 18px;
     font-weight: 700;
     color: rgb(255, 255, 255);
+  }
+  .header-menu__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 44px;
+  }
+  .header-menu__info-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+  }
+  .header-menu__phone {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+  }
+  .header-menu__phone-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    margin-bottom: 72px;
+  }
+  .header-menu__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+  .header-menu__contacts-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(22, 21, 79);
+    display: flex;
+    gap: 19px;
+  }
+  .header-menu__contacts-link > svg > path {
+    fill: rgb(255, 255, 255);
+  }
+  .index-catalog, .index-about-us, .index-services, .index-delivery {
+    display: none;
+  }
+  .footer {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -194,17 +194,15 @@
     }
 
     .header-menu {
-        &__nav {
-            display: none;
-            width: 100vw;
-            height: 100vh;
-            top: -27px;
-            left: -570px;
-            position: absolute;
-            white-space: nowrap;
-            background-color: $turquoiseWithoutOpacityColor;
-            padding: 20px 24px;
-        }
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: absolute;
+        white-space: nowrap;
+        background-color: $turquoiseWithoutOpacityColor;
+        padding: 20px 24px;
 
         &__container {
             display: flex;
@@ -254,12 +252,70 @@
             display: flex;
             flex-direction: column;
             gap: 19px;
+            margin-bottom: 32px;
 
             &-link {
                 @include font(18px, 700);
                 color: $whiteColor;
             }
         }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 44px;
+
+            &-link {
+                @include font(16px, 400);
+                color: $whiteColor;
+            }
+        }
+
+        &__phone {
+            &-box {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                @include font(14px, 400);
+                color: $whiteColor;
+                margin-bottom: 72px;
+            }
+
+            @include font(18px, 500);
+            color: $whiteColor;
+        }
+
+        &__contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+
+            &-link {
+                @include font(14px, 700);
+                color: $darkblueColor;
+                display: flex;
+                gap: 19px;
+
+                &>svg>path {
+                    fill: $whiteColor;
+                }
+            }
+        }
+    }
+
+    .index {
+
+        &-catalog,
+        &-about-us,
+        &-services,
+        &-delivery {
+            display: none;
+        }
+    }
+
+    .footer {
+        display: none;
     }
 }
 
