@@ -118,7 +118,7 @@
 @media (max-width: 1024px) {
     .product {
         &-card {
-            &__animation, &__hover {
+            &__hover {
                 display: none;
             }
         }

@@ -23,7 +23,7 @@
                     @include font(14px, 700);
                     color: $whiteColor;
 
-                    & > svg {
+                    &>svg {
                         max-height: 23px;
                         max-width: 16px;
                     }
@@ -36,7 +36,7 @@
             }
 
             &__cards {
-                margin: 14px 16px 65px;
+                margin: 20px 13px 49px;
                 gap: 9px;
             }
 

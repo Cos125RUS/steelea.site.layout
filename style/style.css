@@ -1288,7 +1288,7 @@ ul {
 }
 
 @media (max-width: 1024px) {
-  .product-card__animation, .product-card__hover {
+  .product-card__hover {
     display: none;
   }
 }
@@ -1729,7 +1729,7 @@ ul {
     margin-top: 25px;
   }
   .index-catalog__cards {
-    margin: 14px 16px 65px;
+    margin: 20px 13px 49px;
     gap: 9px;
   }
   .index-catalog__card-box {
