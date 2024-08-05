@@ -4,10 +4,6 @@
     background: linear-gradient(0.00deg, rgb(249, 249, 249) 51.616%, rgb(213, 217, 217) 198.516%);
     position: relative;
 
-    &__price {
-        display: none;
-    }
-
     &__box {
         @extend %flex-column-center-center;
         max-width: 1440px;

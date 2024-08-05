@@ -247,6 +247,10 @@
   color: rgb(13, 100, 201);
 }
 
+.media__price {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .product-card:hover {
     transition: none;
@@ -254,6 +258,28 @@
   }
   .product-card__hover {
     background: none;
+  }
+  .media__price {
+    width: 100%;
+    min-height: 38px;
+    background-color: rgb(13, 100, 201);
+    display: flex;
+    align-items: center;
+  }
+  .media__price-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+  }
+  .media__price-link > svg {
+    max-height: 23px;
+    max-width: 16px;
   }
 }
 * {
@@ -595,9 +621,6 @@ ul {
   background: linear-gradient(0deg, rgb(249, 249, 249) 51.616%, rgb(213, 217, 217) 198.516%);
   position: relative;
 }
-.index-catalog__price {
-  display: none;
-}
 .index-catalog__box {
   max-width: 1440px;
 }
@@ -842,6 +865,9 @@ ul {
   min-height: 42px;
   line-height: 1.5em;
   color: rgb(0, 0, 0);
+}
+.catalog-top__menu {
+  display: none;
 }
 .catalog-main {
   padding: 28px 0 64px;
@@ -1710,27 +1736,6 @@ ul {
   .index-catalog__tape {
     display: none;
   }
-  .index-catalog__price {
-    width: 100%;
-    min-height: 38px;
-    background-color: rgb(13, 100, 201);
-    display: block;
-  }
-  .index-catalog__price-link {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 13px;
-    font-size: 14px;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-  }
-  .index-catalog__price-link > svg {
-    max-height: 23px;
-    max-width: 16px;
-  }
   .index-catalog__title {
     font-size: 19px;
     font-weight: 700;
@@ -1842,7 +1847,39 @@ ul {
   }
 }
 @media (max-width: 1024px) {
-  .catalog {
+  .catalog-top {
+    min-height: 0;
+    border-bottom: 0;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .catalog-top__left {
+    display: none;
+  }
+  .catalog-top__right {
+    display: none;
+  }
+  .catalog-top__menu {
+    display: block;
+  }
+  .catalog-top__menu-button {
+    margin-top: 30px;
+    margin-bottom: 28px;
+    border: 0;
+    border-radius: 11px;
+    box-sizing: border-box;
+    background-color: rgb(13, 100, 201);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 700;
+    height: 30px;
+    width: 171px;
+  }
+  .catalog-main {
+    display: none;
+  }
+  .offer {
     display: none;
   }
 }

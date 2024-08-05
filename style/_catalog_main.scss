@@ -34,6 +34,10 @@
                 color: $blackColor;
             }
         }
+
+        &__menu {
+            display: none;
+        }
     }
 
     &-main {

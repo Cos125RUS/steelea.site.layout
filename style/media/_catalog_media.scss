@@ -1,5 +1,44 @@
 @media (max-width: 1024px) {
     .catalog {
+        &-top {
+            min-height: 0;
+            border-bottom: 0;
+            gap: 0;
+            flex-direction: column;
+            align-items: center;
+
+            &__left {
+                display: none;
+            }
+
+            &__right {
+                display: none;
+            }
+
+            &__menu {
+                display: block;
+
+                &-button {
+                    margin-top: 30px;
+                    margin-bottom: 28px;
+                    border: 0;
+                    border-radius: 11px;
+                    box-sizing: border-box;
+                    background-color: $blueColor;
+                    color: $whiteColor;
+                    @include font(18px, 700);
+                    height: 30px;
+                    width: 171px;
+                }
+            }
+        }
+
+        &-main {
+            display: none;
+        }
+    }
+
+    .offer {
         display: none;
     }
 }
