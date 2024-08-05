@@ -247,6 +247,15 @@
   color: rgb(13, 100, 201);
 }
 
+@media (max-width: 1024px) {
+  .product-card:hover {
+    transition: none;
+    transform: none;
+  }
+  .product-card__hover {
+    background: none;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -1287,11 +1296,6 @@ ul {
   font-weight: 400;
 }
 
-@media (max-width: 1024px) {
-  .product-card__hover {
-    display: none;
-  }
-}
 .offer {
   min-height: 471px;
   background: linear-gradient(180deg, rgb(225, 230, 230) 51.659%, rgb(118, 119, 119) 162.471%);
@@ -1608,6 +1612,8 @@ ul {
     white-space: nowrap;
     background-color: rgb(62, 122, 191);
     padding: 20px 24px;
+    position: fixed;
+    overflow-y: hidden;
   }
   .header-menu__container {
     display: flex;
@@ -1741,6 +1747,9 @@ ul {
   }
   .index-catalog__card-name {
     padding-bottom: 15px;
+  }
+  .index-catalog__card-animation {
+    display: none;
   }
   .index-about-us {
     border-top: 1px solid rgb(194, 196, 199);

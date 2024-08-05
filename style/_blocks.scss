@@ -139,3 +139,21 @@
         }
     }
 }
+
+
+@media (max-width: 1024px) {
+    .product {
+        &-card {
+            &:hover {
+                transition: none;
+                transform: none;
+            }
+
+            &__hover {
+                background: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {}

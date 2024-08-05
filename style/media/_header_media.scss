@@ -204,6 +204,8 @@
         white-space: nowrap;
         background-color: $turquoiseWithoutOpacityColor;
         padding: 20px 24px;
+        position: fixed;
+        overflow-y: hidden;
 
         &__container {
             display: flex;
