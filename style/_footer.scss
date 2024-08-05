@@ -23,6 +23,7 @@
             padding-bottom: 15px;
             border-bottom: 1.5px solid $grayColor;
             margin-bottom: 52px;
+            color: $darkblueColor;
         }
     }
 
@@ -94,6 +95,7 @@
         &-item {
             @include font(16px, 500);
             text-wrap: nowrap;
+            color: $darkblueColor;
         }
 
         &-links {
