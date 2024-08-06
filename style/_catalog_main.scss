@@ -117,6 +117,10 @@
         }
 
         &__product {
+            &-media-img {
+                display: none;
+            }
+            
             &-ul {
                 @extend %flex-column;
                 gap: 22px;

@@ -923,6 +923,9 @@ ul {
 .catalog-main__promotion:hover {
   color: rgb(178, 245, 34);
 }
+.catalog-main__product-media-img {
+  display: none;
+}
 .catalog-main__product-ul {
   gap: 22px;
 }
@@ -1877,9 +1880,106 @@ ul {
     width: 171px;
   }
   .catalog-main {
+    padding: 0 0 51px;
+    gap: 0;
+  }
+  .catalog-main__nav {
     display: none;
   }
+  .catalog-main__product-item {
+    min-width: 284px;
+    min-height: 340px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .catalog-main__product-ul {
+    gap: 9px;
+  }
+  .catalog-main__product-content {
+    border-top: 1.5px solid rgb(194, 196, 199);
+    width: 100%;
+  }
+  .catalog-main__product-content > img {
+    display: none;
+  }
+  .catalog-main__product-media-img {
+    display: block;
+    padding-top: 7px;
+  }
+  .catalog-main__product-title {
+    margin-left: 0;
+    padding-bottom: 19px;
+  }
+  .catalog-main__product-sections {
+    min-height: 0;
+    gap: 15px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .catalog-main__product-form {
+    padding-top: 23px;
+    width: 100%;
+  }
+  .catalog-main__product-section-options {
+    border-right: 0;
+    padding-right: 0;
+    gap: 18px;
+    flex-direction: row;
+  }
+  .catalog-main__product-option > h4 {
+    display: none;
+  }
+  .catalog-main__product-option-top {
+    gap: 8px;
+  }
   .offer {
+    display: none;
+  }
+  .option__details {
+    top: 0;
+    margin-top: 0;
+    min-width: 68px;
+  }
+  .option__details > summary {
+    min-width: 68px;
+    padding-left: 20px;
+  }
+  .option__details > ul {
+    min-width: 68px;
+  }
+  .option__details > ul > li > label {
+    width: 68px;
+  }
+  .option__background {
+    top: 0;
+    min-width: 68px;
+  }
+  .option__arrow {
+    top: 12px;
+    left: 47px;
+  }
+  .option__arrow-background {
+    top: 0;
+  }
+  .option__switch {
+    transform: none;
+    min-width: 68px;
+  }
+  .option__switch-background {
+    min-width: 68px;
+  }
+  .option__switch-slider {
+    transition: 0.3s;
+  }
+  .option__switch-slider:before {
+    transform: translateX(-38px);
+  }
+  .option__switch-checkbox:checked + span::before {
+    transform: translateX(38px);
+  }
+  .option__info-box {
     display: none;
   }
 }
