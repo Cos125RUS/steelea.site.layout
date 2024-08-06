@@ -72,6 +72,8 @@
                 &-title {
                     margin-left: 0;
                     padding-bottom: 19px;
+                    max-width: 250px;
+                    text-align: center;
                 }
 
                 &-sections {
@@ -83,6 +85,7 @@
 
                 &-form {
                     padding-top: 23px;
+                    padding-bottom: 22px;
                     width: 100%;
                 }
 
@@ -90,7 +93,7 @@
                     &-options {
                         border-right: 0;
                         padding-right: 0;
-                        gap: 18px;
+                        gap: 14px;
                         flex-direction: row;
                     }
                 }
@@ -104,7 +107,21 @@
                         gap: 8px;
                     }
 
-                    
+                    &-bottom {
+                        gap: 0;
+                    }
+                }
+
+                &-button {
+                    & > span {
+                        display: none;
+                    }
+                }
+
+                &-cart {
+                    display: block;
+                    max-height: 18px;
+                    max-width: 18px;
                 }
             }
         }
@@ -171,6 +188,45 @@
 
         &__info-box {
             display: none;
+        }
+    }
+
+    .counts {
+        &__top {
+            & h4 {
+                display: none;
+            }
+        }
+
+        &__box {
+            gap: 14px;
+            margin-bottom: 26px;
+        }
+
+        &__info {
+            &-box {
+                display: block;
+            }
+        }
+
+        &__bottom {
+            display: flex;
+            gap: 52px;
+        }
+    }
+
+    .total {
+        margin-bottom: 0;
+        min-width: 0;
+        align-items: center;
+        gap: 36px;
+
+        & h4 {
+            font-size: 11px;
+        }
+
+        & p {
+            font-size: 14px;
         }
     }
 }

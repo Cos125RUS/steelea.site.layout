@@ -120,7 +120,7 @@
             &-media-img {
                 display: none;
             }
-            
+
             &-ul {
                 @extend %flex-column;
                 gap: 22px;
@@ -204,6 +204,10 @@
                     background-color: $blueColor;
                     color: $whiteColor;
                 }
+            }
+
+            &-cart {
+                display: none;
             }
         }
     }
@@ -490,6 +494,10 @@
         &-arrow {
             top: 13px;
         }
+    }
+
+    &__info-box {
+        display: none;
     }
 }
 
