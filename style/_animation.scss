@@ -57,3 +57,25 @@
         rotate: -360deg;
     }
 }
+
+@keyframes menu-slide-up {
+    0% {
+        transform: translateX(100vw);
+        display: block;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes menu-slide-down {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100vw);
+        display: none;
+    }
+}

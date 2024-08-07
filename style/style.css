@@ -46,6 +46,24 @@
     rotate: -360deg;
   }
 }
+@keyframes menu-slide-up {
+  0% {
+    transform: translateX(100vw);
+    display: block;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes menu-slide-down {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+    display: none;
+  }
+}
 .product-main, .counts__box, .option__li, .catalog-main, .index-delivery, .index-services, .index-about-us, .index-catalog__cards, .index-catalog, .banner__picture, .header__middle, .main-top {
   display: flex;
   justify-content: center;
@@ -280,6 +298,13 @@
   .media__price-link > svg {
     max-height: 23px;
     max-width: 16px;
+  }
+  .slide-up-checkbox:checked ~ nav {
+    animation: menu-slide-up 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  .slide-up-checkbox:not(:checked) ~ nav {
+    animation: menu-slide-down 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    display: block;
   }
 }
 * {
