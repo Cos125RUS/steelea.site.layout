@@ -72,6 +72,7 @@
 @keyframes menu-slide-down {
     0% {
         transform: translateX(0);
+        display: block;
     }
 
     100% {
