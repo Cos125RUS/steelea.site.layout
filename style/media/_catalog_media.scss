@@ -14,11 +14,29 @@
             &__right {
                 display: none;
             }
+        }
+
+        &-main {
+            padding: 0 0 51px;
+            gap: 0;
+            flex-direction: column;
+            align-items: center;
 
             &__menu {
-                display: block;
+                &-checkbox {
+                    &:checked~nav {
+                        position: absolute;
+                        top: 0;
+                        z-index: 6;
+                        min-height: 100vh;
+                        min-width: 100vw;
+                    }
+                }
 
                 &-button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     margin-top: 30px;
                     margin-bottom: 28px;
                     border: 0;
@@ -31,14 +49,51 @@
                     width: 171px;
                 }
             }
-        }
 
-        &-main {
-            padding: 0 0 51px;
-            gap: 0;
+            &__interface {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 28px 27px 9px 40px;
+                position: fixed;
+                background-color: $whiteColor;
+                min-width: 100vw;
+                z-index: 6;
+
+                &-explanation {
+                    color: $blueColor;
+                    @include font(16px, 700);
+                }
+
+                &-cross {
+                    & path {
+                        fill: $blueColor;
+                    }
+                }
+            }
+
+            &__ul {
+                margin-top: 58px;
+            }
+
+            &__current-item {
+                box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+            }
+            
+            &__promotion {
+                display: none;
+            }
 
             &__nav {
                 display: none;
+
+                &-box {
+                    height: 100%;
+                    position: fixed;
+                    overflow-y: scroll;
+                    z-index: 5;
+                    background-color: $whiteColor;
+                }
             }
 
             &__product {
@@ -121,7 +176,7 @@
                     align-items: center;
                     background-color: $blueColor;
 
-                    & > span {
+                    &>span {
                         display: none;
                     }
                 }
@@ -195,7 +250,7 @@
 
             &-slider {
                 transition: 0.3s;
-                
+
                 &:before {
                     transform: translateX(-38px);
                 }
@@ -247,6 +302,18 @@
 
         & p {
             text-wrap: nowrap;
+        }
+    }
+
+    .current-item {
+        &__active {
+            min-width: 100vw;
+            border-radius: 0;
+            border: 0;
+        }
+
+        &:last-child {
+            box-shadow: none;
         }
     }
 }

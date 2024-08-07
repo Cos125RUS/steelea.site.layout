@@ -34,16 +34,16 @@
                 color: $blackColor;
             }
         }
-
-        &__menu {
-            display: none;
-        }
     }
 
     &-main {
         @extend %flex-center;
         padding: 28px 0 64px;
         gap: 55px;
+
+        &__menu-button {
+            display: none;
+        }
 
         &__nav {
             @extend %flex-column-center;
@@ -221,7 +221,8 @@
     @include font(16px, 500);
     min-height: 48px;
     min-width: 239px;
-
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+    
     &:hover {
         cursor: pointer;
         color: $blueColor;
@@ -233,6 +234,7 @@
         border-radius: 11px;
         box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
         min-width: 260px;
+        z-index: 1;
 
         &:hover {
             color: $whiteColor;

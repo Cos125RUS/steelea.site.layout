@@ -866,12 +866,12 @@ ul {
   line-height: 1.5em;
   color: rgb(0, 0, 0);
 }
-.catalog-top__menu {
-  display: none;
-}
 .catalog-main {
   padding: 28px 0 64px;
   gap: 55px;
+}
+.catalog-main__menu-button {
+  display: none;
 }
 .catalog-main__ul {
   margin-bottom: 25px;
@@ -1004,6 +1004,7 @@ ul {
   font-weight: 500;
   min-height: 48px;
   min-width: 239px;
+  box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
 }
 .current-item:hover {
   cursor: pointer;
@@ -1015,6 +1016,7 @@ ul {
   border-radius: 11px;
   box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
   min-width: 260px;
+  z-index: 1;
 }
 .current-item__active:hover {
   color: rgb(255, 255, 255);
@@ -1869,10 +1871,23 @@ ul {
   .catalog-top__right {
     display: none;
   }
-  .catalog-top__menu {
-    display: block;
+  .catalog-main {
+    padding: 0 0 51px;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
   }
-  .catalog-top__menu-button {
+  .catalog-main__menu-checkbox:checked ~ nav {
+    position: absolute;
+    top: 0;
+    z-index: 6;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  .catalog-main__menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 30px;
     margin-bottom: 28px;
     border: 0;
@@ -1885,12 +1900,42 @@ ul {
     height: 30px;
     width: 171px;
   }
-  .catalog-main {
-    padding: 0 0 51px;
-    gap: 0;
+  .catalog-main__interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 27px 9px 40px;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    min-width: 100vw;
+    z-index: 6;
+  }
+  .catalog-main__interface-explanation {
+    color: rgb(13, 100, 201);
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .catalog-main__interface-cross path {
+    fill: rgb(13, 100, 201);
+  }
+  .catalog-main__ul {
+    margin-top: 58px;
+  }
+  .catalog-main__current-item {
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
+  }
+  .catalog-main__promotion {
+    display: none;
   }
   .catalog-main__nav {
     display: none;
+  }
+  .catalog-main__nav-box {
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 5;
+    background-color: rgb(255, 255, 255);
   }
   .catalog-main__product-ul {
     gap: 9px;
@@ -2046,6 +2091,14 @@ ul {
   }
   .total p {
     text-wrap: nowrap;
+  }
+  .current-item__active {
+    min-width: 100vw;
+    border-radius: 0;
+    border: 0;
+  }
+  .current-item:last-child {
+    box-shadow: none;
   }
 }
 @media (max-width: 1024px) {
