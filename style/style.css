@@ -1888,17 +1888,14 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 28px;
+    margin-bottom: 13px;
     border: 0;
-    border-radius: 11px;
-    box-sizing: border-box;
-    background-color: rgb(13, 100, 201);
+    background-color: rgb(22, 21, 79);
     color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 700;
-    height: 30px;
-    width: 171px;
+    min-height: 38px;
+    min-width: 100vw;
   }
   .catalog-main__interface {
     display: flex;
