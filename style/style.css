@@ -65,6 +65,25 @@
     display: none;
   }
 }
+@keyframes catalog-slide-up {
+  0% {
+    left: 100vw;
+    display: block;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes catalog-slide-down {
+  0% {
+    display: block;
+    left: 0;
+  }
+  100% {
+    left: 100vw;
+    display: none;
+  }
+}
 .product-main, .counts__box, .option__li, .catalog-main, .index-delivery, .index-services, .index-about-us, .index-catalog__cards, .index-catalog, .banner__picture, .header__middle, .main-top {
   display: flex;
   justify-content: center;
@@ -1903,11 +1922,10 @@ ul {
     align-items: center;
   }
   .catalog-main__menu-checkbox:checked ~ nav {
-    position: absolute;
-    top: 0;
-    z-index: 6;
-    min-height: 100vh;
-    min-width: 100vw;
+    animation: catalog-slide-up 0.6s ease-in-out;
+  }
+  .catalog-main__menu-checkbox:not(:checked) ~ nav {
+    animation: catalog-slide-down 0.6s ease-in-out;
   }
   .catalog-main__menu-button {
     display: flex;
@@ -1951,6 +1969,11 @@ ul {
   }
   .catalog-main__nav {
     display: none;
+    position: absolute;
+    top: 0;
+    z-index: 6;
+    min-height: 100vh;
+    min-width: 100vw;
   }
   .catalog-main__nav-box {
     height: 100%;

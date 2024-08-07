@@ -80,3 +80,26 @@
         display: none;
     }
 }
+
+@keyframes catalog-slide-up {
+    0% {
+        left: 100vw;
+        display: block;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes catalog-slide-down {
+    0% {
+        display: block;
+        left: 0;
+    }
+
+    100% {
+        left: 100vw;
+        display: none;
+    }
+}

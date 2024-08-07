@@ -25,11 +25,10 @@
             &__menu {
                 &-checkbox {
                     &:checked~nav {
-                        position: absolute;
-                        top: 0;
-                        z-index: 6;
-                        min-height: 100vh;
-                        min-width: 100vw;
+                        animation: catalog-slide-up 0.6s ease-in-out;
+                    }
+                    &:not(:checked)~nav {
+                        animation: catalog-slide-down 0.6s ease-in-out;
                     }
                 }
 
@@ -76,14 +75,19 @@
             &__current-item {
                 box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
             }
-            
+
             &__promotion {
                 display: none;
             }
 
             &__nav {
                 display: none;
-                
+                position: absolute;
+                top: 0;
+                z-index: 6;
+                min-height: 100vh;
+                min-width: 100vw;
+
                 &-box {
                     height: 100%;
                     position: fixed;
