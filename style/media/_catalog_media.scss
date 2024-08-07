@@ -180,6 +180,18 @@
                     &>span {
                         display: none;
                     }
+
+                    &:active {
+                        background-color: $yellowColor;
+
+                        & > svg.catalog-main__product-cart {
+                            display: none;
+                        }
+
+                        & > svg.catalog-main__product-check {
+                            display: block;
+                        }
+                    }
                 }
 
                 &-cart {

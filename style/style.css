@@ -1036,7 +1036,7 @@ ul {
   background-color: rgb(13, 100, 201);
   color: rgb(255, 255, 255);
 }
-.catalog-main__product-cart {
+.catalog-main__product-cart, .catalog-main__product-check {
   display: none;
 }
 
@@ -2047,6 +2047,15 @@ ul {
   }
   .catalog-main__product-button > span {
     display: none;
+  }
+  .catalog-main__product-button:active {
+    background-color: rgb(178, 245, 34);
+  }
+  .catalog-main__product-button:active > svg.catalog-main__product-cart {
+    display: none;
+  }
+  .catalog-main__product-button:active > svg.catalog-main__product-check {
+    display: block;
   }
   .catalog-main__product-cart {
     display: block;
