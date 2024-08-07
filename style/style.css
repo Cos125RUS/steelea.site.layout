@@ -311,7 +311,7 @@
     align-items: center;
     justify-content: center;
     gap: 13px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     color: rgb(255, 255, 255);
   }
@@ -1939,6 +1939,7 @@ ul {
     font-weight: 700;
     min-height: 38px;
     min-width: 100vw;
+    font-size: 16px;
   }
   .catalog-main__interface {
     display: flex;

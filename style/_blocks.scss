@@ -175,7 +175,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 13px;
-                @include font(14px, 700);
+                @include font(16px, 700);
                 color: $whiteColor;
     
                 &>svg {
