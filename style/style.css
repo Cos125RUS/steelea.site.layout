@@ -1039,6 +1039,9 @@ ul {
 .catalog-main__product-cart, .catalog-main__product-check {
   display: none;
 }
+.catalog-main__interface {
+  display: none;
+}
 
 .current-item {
   box-sizing: border-box;
