@@ -886,6 +886,9 @@ ul {
 .index-article__icon:hover path {
   fill: rgb(178, 245, 34);
 }
+.index-article__img {
+  min-height: 390px;
+}
 
 .catalog-top__price-box {
   gap: 10px;
